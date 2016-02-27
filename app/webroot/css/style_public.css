@@ -1,0 +1,1343 @@
+
+/*==============Header section============*/
+
+header{
+	margin-bottom: 2%;
+}
+
+header .logo{
+	width: 100%;
+    height: auto;
+}
+
+header a:hover{
+	text-decoration: none;
+}
+header h1{
+	margin-top: 7%;
+	//margin-left: 23%;
+    font-size: 429%;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+/*====================Menu bar====================*/
+.navbar-inverse {
+    background-color: rgba(44, 87, 123, 0.88);
+    border-color: rgba(44, 87, 123, 0.88);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	font-size: 17px;
+    color: #fff;
+    -webkit-transition: all .5s;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #cfcfcf;
+    background-color: rgba(55, 87, 119, 0.75);
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #cfcfcf;
+    background-color: rgba(55, 87, 119, 0.75);
+}
+
+.navbar-nav > li > .dropdown-menu {
+	//background-color: rgba(44, 87, 123, 0.88);
+	background: #FFF;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    line-height: 29px;
+}
+
+.dropdown-menu li a{
+	color: #000;
+	padding: 10px 0px;
+	text-align: center;
+	-webkit-transition: all .5s;
+}
+
+
+#navbar ul li a:hover{
+	color: #fff;
+    background-color: rgba(55, 87, 119, 0.75);
+    -webkit-transition: all .5s;
+}
+
+.dropdown-menu li a:hover{
+	color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+/*===================main content=================*/
+
+
+/*---------marquee(latest section)--------*/
+.latest-news{
+	font-size: 15px;
+}
+
+.latest-news .news-text{
+	font-size: 14px;
+    font-weight: normal;
+}
+
+.news-text-row{
+	width:100%;
+}
+
+.latest-news table tr{
+	border:1px solid #337ab7;
+}
+
+.news-head button{
+	padding: 3px 12px;
+    background: #257171;
+    border: none;
+    color: #ffffff;
+}
+
+/*-----------------news slide Section---------------*/
+@keyframes ticker {
+	0%   {margin-top: 0}
+	10%  {margin-top: -24px}
+	20%  {margin-top: -48px}
+	30%  {margin-top: -72px}
+	40% {margin-top: -96px}
+	50% {margin-top: -120px}
+	60% {margin-top: -144px}
+	70% {margin-top: -168px}
+	80% {margin-top: -192px}
+	90% {margin-top: -216px}
+	100% {margin-top: 0}
+}
+
+
+.news_latest {
+  height: 24px;
+  overflow: hidden;
+  -webkit-user-select: none
+} 
+
+.news_latest ul {
+  float: left;
+  padding-left: 20px;
+  animation: ticker 30s cubic-bezier(1, 0, .5, 0) infinite;
+  -webkit-user-select: none
+}
+
+.news_latest ul li {line-height: 24px; list-style: none }
+
+.news_latest ul li a {
+  color: blue;
+  text-decoration: none;
+  font: 16px Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none
+}
+
+.news_latest ul li a:hover{
+							color:green;
+}
+
+.news_latest ul:hover { animation-play-state: paused}
+
+/*=====================Carousel====================*/
+
+.carousel-indicators{
+	top:85%;
+}
+
+.carousel-indicators li{
+	width:15px;
+	height:15px;
+	border-radius: 15px;
+}
+
+.carousel-indicators .active {
+    width: 15px;
+    height: 15px;
+    margin: 1px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	line-height: 1;
+	width: 100%;
+	height: 500px;
+}
+
+.carousel-caption {
+    right: 0;
+    left: 0;
+    padding-top:16px; 
+    top: 90.5%;
+    background: rgba(0, 0, 255, 0.38);
+    -webkit-transition: all 2s;
+}
+
+.carousel .carousel-caption p{
+	position: relative;
+	font-size: 16px;
+
+}
+
+/*=================Main Content Area================*/
+
+.main-content{
+	padding-top: 1%;
+}
+
+
+
+/*=============admission=========*/
+.admission{
+	background: rgba(68, 83, 130, 0.72);
+	text-align: center;
+	line-height: 30px;
+}
+
+.admission h1{
+	padding-top: 2%;
+	color:#fff;
+	text-align: center;
+}
+
+.admission-h1-border{
+	width: 90%;
+}
+
+.admission p{
+	color:#fcf8e3;
+	font-size: 118%;
+	text-align: center;
+}
+
+.admission .button {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.application_body h2{
+	text-align: center;
+	margin-top: 4%;
+	margin-bottom: 4%;
+}
+
+.application_body hr{
+
+}
+
+.online_application{
+	margin-top: 1%;
+	margin-bottom: 20px;
+    background-color:rgba(237, 237, 237, 0.24);
+    padding-top: 20px;
+    //padding-bottom: 20px;
+    border-radius: 7px;
+    box-shadow: 0px 2px 9px 2px rgba(115, 113, 113, 0.75);
+}
+
+.online_application .control-labe{
+	text-align: left;
+}
+
+.online_application .form-horizontal .control-label{
+	text-align: left;
+	//color:#0af056;
+}
+
+.online_apply .btn{
+	background: #22770D;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: inherit;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.admission .btn_online{
+	width: 31%;
+}
+
+.submit-green{
+	width: 51%;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.application_submit_page{
+	text-align: center;
+	line-height: 40px;
+}
+
+.application_submit_page h2{
+	color: green;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.application_submit_page .success_notice{
+	color:green;
+	font-size: 17px;
+}
+
+.application_submit_page p span{
+	color: #F50572;
+	font-size: 17px;	
+}
+.application_submit_page p strong{
+	color: #12DC1A;
+}
+
+.application_submit_page p a{
+	font-size: 17px;
+	color: blue;
+	font-weight: 600;
+	margin-left: 1%;
+}
+.application_submit_page .fa{
+	margin-left: 1%;
+}
+.application_submit_page .error{
+	color: red;
+	font-size: 30px;
+	font-weight: 600;
+}
+.application_submit_page .error_p{
+	color: red;
+} 
+
+.application_submit_page .error_p a{
+	color: blue;
+}
+
+.application_status{
+	margin: 20px 0px;
+    background-color: #ededed;
+    padding-top: 45px;
+    padding-bottom: 21px;
+    border-radius: 7px;
+    box-shadow: 0px 2px 9px 2px rgba(115, 113, 113, 0.75);	
+}
+.application_invalid p{
+	text-align: center;
+	font-size: 15px;
+	color: red;
+}
+.application_success{
+	margin: 20px 0px;
+    background-color: #ededed;
+    padding-top: 22px;
+    padding-bottom: 21px;
+    border-radius: 7px;
+    box-shadow: 0px 2px 9px 2px rgba(115, 113, 113, 0.75);	
+}
+.application_success p{
+	text-align: center;
+	font-size: 17px;
+	color: green;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+/*=============Suggestions==========*/
+.suggrstion{
+	text-align: center;
+}
+.suggrstion h1{
+	color: #3F64D2;
+	//font-weight: 600;
+}
+.suggrstion li{
+	list-style: none;
+}
+.suggrstion .table > thead > tr > th, .suggrstion .table > tbody > tr > th, .suggrstion .table > tfoot > tr > th, .suggrstion .table > thead > tr > td, .suggrstion .table > tbody > tr > td, .suggrstion .table > tfoot > tr > td {
+	border : none;
+}
+.suggrstion th{
+	text-align: center;
+	font-size: 20px;
+}
+.suggrstion th hr{
+	width: 30%;
+    border: 1px solid #BDB1B1;
+}
+.suggrstion p{
+	font-size: 17px;
+	margin-top: 8px;
+}
+.suggrstion .fa{
+	color: red;
+}
+/*=================ABOUT SCHOOL====================*/
+
+.about-schhol {
+    padding-top: 5%;
+    font-size: 17px;
+    line-height: 23px;
+    word-spacing: 2px;
+}
+
+.about-schhol h1{
+	text-align: center;
+}
+.about-schhol-border{
+	width: 95%;
+	border-color: rgba(136, 129, 129, 0.58);
+}
+
+.about-schhol p{
+	text-align: justify;
+}
+
+
+
+/*--------------------------------------
+		RIGHT SIDE SECTION
+-----------------------------------------*/
+
+/*--------------calendar-------------------*/
+.calendar{
+	margin-bottom: 15px;
+}
+
+.responsive-calendar .controls {
+    background: #5EFB5E;
+    padding: 13px 0px;
+}
+
+.responsive-calendar .glyphicon{
+	top: -5px;
+}
+
+.responsive-calendar hr {
+	margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.responsive-calendar{
+    border: 1px solid #CAC2C2;
+    border-radius: 4px;	
+}
+
+.off-day{
+	color: red;
+}
+
+
+/*-----------------Notice--------------*/
+
+
+
+/*-----------list group--------------*/
+.student_info h2{
+	text-align: center;
+	color: blue;
+}
+.student_info p{
+	font-size: 17px;
+}
+.student_info .pull-right img{
+	margin-right: 0;
+	padding: 5px;
+	border: 1px solid #a59c9c;
+	background-color: #f2f2f2;
+	border-radius: 6px;
+}
+
+.list-group h3{
+	text-align: center;
+}
+
+.list-group ul li a{
+	-webkit-transition: all .3s;
+}
+
+.list-group ul li:hover a{
+	padding-left: 5%;
+}
+
+
+/*-------------result css START-----------*/
+
+.result_login .control-label{
+	text-align: left;
+}
+.result_login_bg{
+	background-color: #ededed;
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px 2px rgba(115, 113, 113, 0.75);
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.result_login_bg form{
+	padding-top: 5%;
+}
+
+.result h1{
+	text-align: center;
+}
+.result-sheet table{
+    width:100%;
+    text-align:center;
+    font-weight: bold;
+    font-size:20px;
+	
+}
+.result-sheet table td{
+     border:1px solid #001F5B;
+}
+
+.background_th{
+	 background-color:rgb(86, 98, 120);
+}
+
+.result-sheet table .big_box td{
+   
+    padding-top:6px;
+    padding-bottom:6px;
+    color:#001F5B;
+
+}
+
+.result-sheet table .top_box td{
+    padding:10px;
+    color:#F6F9FD;
+
+}
+
+
+.blue_1{
+	background-color:#C7DDF3;
+}
+.blue_2{
+	background-color:#C7DDF3;
+}
+.blue_3{
+	background-color:#C7DDF3;
+	font-size: 15px;
+	border-collapse:collapse;
+}
+
+.exam_t {
+	text-align:center;
+	font-size: 22px;
+	color: #001F5B;
+	font-weight: 600;
+	padding-top: 15px;
+}
+
+
+/*-------------result css END------------*/
+
+/*==============Academic CSS Start==========*/
+.academic h1{
+	text-align: center;
+}
+.grd_text hr{
+	width: 46%;
+}
+.academic p{
+	font-size: 17px;
+    line-height: 23px;
+    word-spacing: 2px;
+    text-align: justify;
+}
+/*----------------end of ACADEMIC CSS--------*/
+
+
+/*-----------------Gallery CSS--------------*/
+
+.MyGallery .images p{
+	width: 15.4%;
+	display: block;
+	position: absolute;
+	margin-top: -2.8%;
+	color: #FFF;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.48);
+	padding: 0.39% 0%;
+	font-size: 12px;
+	text-align: center;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.MyGallery .images:hover p{
+	opacity: 1;
+	overflow: hidden;
+	-webkit-transition:all .3s ease;
+}
+
+/*=======================Latest News Page==================*/
+.latest_sidebar{
+	margin-top: 0%;
+	background: #ededed;
+}
+.latest_sidebar h3{
+	text-align: center;
+    padding-top: 10%;
+}
+.latest_sidebar hr{
+	width: 83%;
+    border-color: azure;
+}
+.side_latestnews ul{
+	height: 430px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    list-style: none;
+    padding-bottom: 10%;
+    font-size: 16px;
+    line-height: 25px;
+    word-spacing: 2px;
+}
+
+
+
+
+
+
+/*===================Contact Page CSS Code is Here!!!================*/
+
+.address-field{
+	font-size: 20px;
+}
+
+.address-field strong{
+	color: green;
+	font-size: 25px;
+}
+
+.address-field address{
+	padding: 20px 0px;
+}
+
+.address-field .glyphicon-earphone{
+	color: green;
+}
+
+.address-field .glyphicon-envelope{
+	color:blue;
+}
+
+
+.contact-mail h2{
+	text-align: center;
+}
+
+.contact-mail .glyphicon-user{
+	color: rgb(240, 0, 255);
+}
+
+.contact-mail .glyphicon-earphone{
+	color: green;
+}
+
+.contact-mail .glyphicon-envelope{
+	color:blue;
+}
+
+.contact-mail .send{
+	font-size: 20px;
+}
+
+.contact-mail .btn-warning {
+    color: #FFF;
+    background-color: #6460ED;
+    border-color: #3652EE;
+    padding: 2% 5%;
+}
+
+.contact-mail .btn-warning:hover {
+    background-color: #7B78E4;
+}
+
+#map{
+	
+}
+
+
+
+/*======================= About Page CSS is Here========================*/
+.text-content h1{
+ text-align: center;
+}
+
+.text-content hr{
+	width: 46%;
+}
+
+.text-content img{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 300px;
+	max-height: auto;
+}
+
+.text-content{
+	font-size: 16px;
+    line-height: 25px;
+    word-spacing: 2px;
+    text-align: justify;
+}
+
+.side-link{
+	margin-top: 45%;
+	background: #ededed;	
+}
+
+.side-link hr{
+	width: 83%;
+    border-color: azure;
+}
+
+.side-link h3{
+	text-align: center;
+	padding-top: 10%;
+}
+
+.side-link ul{
+	list-style: none;
+	padding-bottom: 10%;
+	font-size: 16px;
+    line-height: 25px;
+    word-spacing: 2px;
+}
+
+.side-link ul li a{
+	padding: 5px 0px;
+	-webkit-transition: all .3s;
+}
+
+.side-link ul li:hover{
+	//text-decoration: none;
+	padding-left: 5%;
+}
+.side-link ul li:active a{
+	padding-left: 5%;
+}
+
+/*--------------------Contact page--------------*/
+
+.control-label{
+	font-size: 13px;
+}
+
+
+
+
+/*===================Notice Page==================*/
+
+
+/*--------------End of notice page---------*/
+
+
+/*============= Class Routin=================*/
+
+.direction h3 span{
+	margin-right:2%;
+}
+.direction h3 span .fa{
+	color:blue;
+}
+.routine_menu ul li{
+	width: 10%;
+	text-align: center;
+	font-size: 17px;
+	background-color: #ededed;
+}
+.routin_table{
+	text-align: center;
+	font-size: 17px;
+	margin-top: 5%;
+}
+.routin_table th{
+	text-align: center;
+}
+
+.routin_table th h3{
+	font-size: 24px;
+	margin-top: 52px;
+	color: red;
+}
+
+.class_routine h2, .class_routine h3{
+	text-align: center;
+}
+
+/*==============Games Table============*/
+
+.game h1{
+	text-align: center;
+}
+.game hr{
+
+}
+.game ul li{
+	list-style: none;
+}
+.game ul li p{
+	//font-size: 17px;
+	color: blue;
+}
+
+.video_page h1{
+	text-align: center;
+}
+
+.video_page .side-link {
+    margin-top: -7%;
+}
+.video p{
+	font-size: 17px;
+	margin-top: 20px;
+}
+
+
+/*=====================footer=================*/
+footer{
+    background: #ededed;
+    overflow: hidden;
+    margin-top: 20px;
+}
+footer h3{
+    margin-left: 30%;
+}
+
+footer ul{
+    margin-left: 14%;
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer .pull-left{
+    margin-left: 5%;
+}
+
+footer .developer{
+    margin-right: 5%;
+}
+.glyphicon-menu-right:before {
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+footer hr{
+    border-top: 1px solid #cccccc;
+    width:90%
+}
+
+footer h3{
+   // border-bottom: 5px solid #989494;
+    //width: 47%;
+}
+
+footer .col-sm-3 hr{
+	border-top: 2px solid #9C9292;
+    width: 70%;
+}
+
+
+
+
+
+/*---------Please don't code any css code on here....if you need write before Responsive css code section-------------*/
+
+
+
+
+
+/*==================================Responsive Code------------------------------*/
+
+
+@media screen and (max-width: 1140px){
+
+	.navbar-inverse .navbar-nav > li > a {
+    	font-size: 14.5px;
+	}
+
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+		height: 450px;
+	}
+
+	.carousel-caption {
+    	padding-top: 12px;
+	}
+}
+
+@media screen and (max-width: 1024px){
+
+	header{
+		margin-bottom: 20px;
+	}
+
+	.navbar-inverse .navbar-nav > li > a {
+    	font-size: 13.9px;
+	}
+
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+		height: 400px;
+	}
+
+	.carousel-caption {
+	    padding-top: 4px;
+	    top: 93%;
+	    padding-bottom: 25px;
+	}
+
+	.carousel .carousel-caption p {
+	    font-size: 14px;
+	    margin-top: 1px;
+	}
+
+	.carousel-indicators {
+    	top: 88%;
+	}
+
+
+	.admission .btn {
+    	font-size: 112%;
+	}
+
+	.admission .btn_online{
+		width: 30%;
+	}
+
+	.MyGallery .images p{
+		margin-top: -3.1%;
+		padding: 0.39% 0%;
+		margin-left: 5px;
+		width: 23.2%;
+		cursor: pointer;
+	}
+
+}
+
+
+
+
+@media screen and (max-width: 980px){
+
+	header h1 {
+	    margin-top: 5%;
+	    font-size: 358%;
+	}
+
+	header .logo {
+	    width: 100%;
+	    height: auto;
+	}
+
+	.navbar-inverse .navbar-nav > li > a {
+	    font-size: 12px;
+	    padding: 10px 12px;
+	}
+
+	.dropdown-menu li a {
+	    padding: 5px 0px;
+	    font-size: 12px;
+	}
+
+	.news-head button{
+		font-size: 15px;
+	}
+
+	.news-text-row marquee{
+		font-size: 12px;
+		line-height: 21px;
+	}
+
+
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+		height: 346px;
+	}
+
+
+	.carousel-caption {
+	    padding-top: 5px;
+	    top: 91%;
+	    padding-bottom: 25px;
+	}
+
+	.carousel .carousel-caption p {
+	    font-size: 13px;
+	    margin-top: 1px;
+	}
+
+	.carousel-indicators {
+    	top: 85%;
+	}
+
+	.carousel-indicators li{
+	    width: 12px;
+	    height: 12px;
+	    margin: 1px;
+	}
+
+
+	.carousel-indicators .active{
+	    width: 12px;
+	    height: 12px;
+	    margin: 1px;
+	}
+
+	.admission h1{
+		font-size: 30px;
+	}
+
+
+	.admission .btn {
+	   // padding: 12px 24px;
+	   // font-size: 116%;
+	}
+
+	.admission .btn {
+    	font-size: 92%;
+	}
+
+	.admission .btn_online{
+		width: 32%;
+	}
+
+	.about-schhol h1{
+		font-size: 30px;
+	}
+
+	/*--------result------*/
+	.new-raght{
+    	margin-left: 8%;
+    	width: 42%;
+	}
+
+	/*-------------contact pages-----------*/
+	.address-field strong {
+    	font-size: 23px;
+	}
+
+	.address-field {
+    	font-size: 18px;
+	}
+
+
+
+	/*-------------About Pages------------*/
+
+	.side-link h3{
+		font-size: 18px;
+	}
+
+	.side-link ul{
+		font-size: 15px;
+		margin-left: -30px;
+	}
+
+	.superbox-active .superbox-list img{
+		height: 250px;
+	}
+
+	.MyGallery .images p{
+		margin-top: -3.9%;
+		padding: 0.39% 0%;
+		margin-left: 5px;
+		width: 46.6%;
+		cursor: pointer;
+	}
+
+	/*--------------Routine page---------------*/
+
+	.routine_menu ul li{
+		width: 13%;
+		font-size: 17px;
+	}
+
+	.direction h3{
+		font-size: 18px;
+	}
+
+	.student_info .pull-left{
+		//margin-left: 2%;
+	}
+	.student_info .pull-right{
+		//margin-right: 2%;
+	}
+
+
+
+	footer h3 {
+    	margin-left: 12%;
+	}
+
+	footer ul {
+    	margin-left: -16%;
+	}
+
+	footer ul li{
+   // padding: 0px 3px;
+	}
+
+
+
+}
+
+
+
+@media screen and (max-width: 768px){
+
+	.admission .btn_online{
+		width: 41%;
+	}
+	.admission .btn {
+    	font-size: 119%;
+	}
+/*--------result table-------*/
+	.hero_text {
+	      height: 300px;
+		  padding-left:inherit;
+		  margin-top: -20px;
+	}
+
+	.jumbotron h1:nth-child(2){
+	    display: inline-block;
+	    vertical-align: top;
+	    width: 80%;
+	}
+
+	.right-hero {
+	    left: 8%;
+	    width: 350px;
+	}
+	.result-sheet table {
+	    font-size: 16px;
+	}
+
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+	    color: #fff;
+	}
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 650px){
+
+	header h1 {
+	    margin-top: 5%;
+	    font-size: 358%;
+	}
+
+	header .logo {
+		width: 35%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+	    color: #fff;
+	}
+
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	height: 375px;
+	}
+
+
+	.carousel-caption {
+	    right: 0px;
+	    left: 0;
+	    padding-top: 3px;
+	    top: 91.5%;
+	    padding-bottom: 28px;
+	}
+
+	.carousel .carousel-caption p {
+	    font-size: 13px;
+	    margin-top: 1px;
+	}
+
+	.carousel-indicators {
+    	display: none;
+	}
+
+	.admission h1 {
+	    padding-top: 5%;
+	    font-size: 21px;
+	    font-weight: 599;
+	}
+
+	.admission p {;
+    	padding: 0px 5px;
+	}
+
+
+	.admission .btn {
+	    padding: 15px 20px;
+	    font-size: 140%;
+	    margin-bottom: 10px;
+	}
+
+
+	.calendar {
+    	margin-bottom: 15px;
+    	margin-top: 30px;
+	}
+
+	footer h3{
+		text-align: center;
+		margin-left: 0;
+	}
+
+	footer ul{
+		margin-left: 15%;
+	}
+
+	footer .pull-left{
+		//margin-left: 24%;
+	}
+
+	footer .pull-right{
+		//margin-right: 24%;
+	}
+
+
+
+/*-----------About Page----------*/
+	.side-link {
+    	margin-top: 6%;
+    }
+
+    .side-link ul{
+		font-size: 18px;
+		margin-left: 0px;
+	}
+
+	/*-------- Result------------*/
+
+	.result-sheet table {
+	    font-size: 14px;
+	}
+
+	.MyGallery .images p{
+		margin-top: -4.3%;
+		padding: 0.39% 0%;
+		margin-left: 5px;
+		width: 46.2%;
+		cursor: pointer;
+	}
+
+	/*--------------Routine page---------------*/
+
+	.routine_menu ul li{
+		width: 14%;
+		//font-size: 17px;
+	}
+
+	.direction h3{
+		font-size: 24px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 480px){
+
+	.navbar-brand > img {
+    	margin-right: auto;
+    	margin-left: 114px;
+	}
+
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+	    color: #fff;
+	}
+
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	height: 275px;
+	}
+
+
+	.carousel-caption{
+		top:88.5%;
+	}
+
+	.admission .btn{
+		font-size: 150%;
+	}
+	.admission .btn_online{
+		width: 59%;
+	}
+
+	.calendar {
+    	margin-top: 30px;
+	}
+
+	footer ul {
+    	margin-left: 65px;
+	}
+
+	footer .pull-left {
+    	margin-left: 27%;
+	}
+
+	footer .pull-right {
+    	margin-right: 34%;
+	}
+
+
+/*-----------About Page----------*/
+	.side-link {
+    	margin-top: 6%;
+    }
+
+/*-----------Result Page--------------*/
+	.result-sheet table{
+	    font-size:9px;
+	}
+	.superbox-active .superbox-list img{
+		height: 150px;
+	}
+
+	.MyGallery .images p{
+		margin-top: -5.9%;
+		padding: 0.39% 0%;
+		margin-left: 5px;
+		width: 44.8%;
+		cursor: pointer;
+	}
+
+	/*--------------Routine page---------------*/
+
+	.routine_menu ul li{
+		width: 13.9%;
+		font-size: 14px;
+	}
+
+	.direction h3{
+		font-size: 24px;
+	}
+
+
+
+}
+
+
+
+
