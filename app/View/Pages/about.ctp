@@ -48,7 +48,7 @@
 				var show_hash = window.location.hash.substr(1,window.location.hash.length);
 				show_hide(show_hash);
 				
-				$('#side_link_about li a').click(function(){
+				$('#side_link_about li a, #footer_link_about li a, #main_link_about li a').click(function(){
 					show_hash = $(this).context.hash.substr(1, $(this).context.hash.length);
 					show_hide(show_hash);
 				});

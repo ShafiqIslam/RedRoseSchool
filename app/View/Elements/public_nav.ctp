@@ -16,7 +16,7 @@
             <li class="<?php if($page=='home') echo 'active';?>"><a href="<?php echo $this->webroot;?>home">হোম</a></li>
             <li class="dropdown <?php if($page=='about') echo 'active';?>">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">আমাদের কথা <span class="caret"></span></a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" id="main_link_about">
                 <li><a href="<?php echo $this->webroot;?>about#chairman">চেয়ারম্যানের কথা</a></li>
                 <li><a href="<?php echo $this->webroot;?>about#headmaster">প্রধান শিক্ষকের কথা</a></li>
                 <li><a href="<?php echo $this->webroot;?>about#mang-commitee">ব্যবস্থাপনা কমিটি</a></li>

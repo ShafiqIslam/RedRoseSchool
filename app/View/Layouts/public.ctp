@@ -65,7 +65,7 @@
         <div class="col-sm-3">
           <h3>আমাদের কথা</h3>
           <hr>
-          <ul>
+          <ul id="footer_link_about">
             <li><a href="<?php echo $this->webroot;?>about#chairman"><span class="glyphicon glyphicon-menu-right">চেয়ারম্যানের কথা</a></li>
             <li><a href="<?php echo $this->webroot;?>about#headmaster"><span class="glyphicon glyphicon-menu-right">প্রধান শিক্ষকের কথা</a></li>
             <li><a href="<?php echo $this->webroot;?>about#mang-commitee"><span class="glyphicon glyphicon-menu-right">ব্যবস্থাপনা কমিটি</a></li>
