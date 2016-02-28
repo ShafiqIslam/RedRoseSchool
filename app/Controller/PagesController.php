@@ -7,7 +7,6 @@ class PagesController extends AppController {
 	public $uses = array();
 
 	public function display($arg1 = null, $arg2 = null) {
-		echo "live push testing..."; die();
 		$this->layout = "public";
 		$path = func_get_args();
 		$count = count($path);
