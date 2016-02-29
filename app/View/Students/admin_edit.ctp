@@ -61,7 +61,7 @@ $blood_groups = array(
                 <label for="inputEmail3" class="col-sm-3 control-label">Photo</label>
                 <div class="col-sm-9">
                 	<?php 
-                	if(!empty($this->form->data['Student']['image'])) {
+                	if(!empty($this->Form->data['Student']['image'])) {
                 		echo "<div class=\"thumbnail-item\">";
                 		echo $this->Html->image('../files/students_images/'.$this->form->data['Student']['image']);
                 		echo "</div>";
