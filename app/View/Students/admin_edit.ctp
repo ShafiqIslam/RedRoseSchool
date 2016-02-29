@@ -17,8 +17,8 @@ $blood_groups = array(
 <div class="index col-md-10 col-sm-10">
     <div class="white">
     	<h2>
-            <?php echo $this->Html->link(__('Go Back To List'), array('action' => 'list', $this->form->data['Student']['session'], $this->form->data['Student']['class_name_id']), array( 'class' => 'btn btn-success', 'style' => 'margin-left:30px')); ?>
-            <?php echo $this->Html->link(__('Result Of this Student'), array('controller'=>'results', 'action' => 'edit', $this->form->data['Student']['id'], 1), array( 'class' => 'btn btn-success', 'style' => 'margin-left:30px')); ?>
+            <?php echo $this->Html->link(__('Go Back To List'), array('action' => 'list', $this->Form->data['Student']['session'], $this->Form->data['Student']['class_name_id']), array( 'class' => 'btn btn-success', 'style' => 'margin-left:30px')); ?>
+            <?php echo $this->Html->link(__('Result Of this Student'), array('controller'=>'results', 'action' => 'edit', $this->Form->data['Student']['id'], 1), array( 'class' => 'btn btn-success', 'style' => 'margin-left:30px')); ?>
     	</h2>
         <?php echo $this->Form->create('Student',array('class'=>'form-horizontal col-md-6', 'type'=>'file')); ?>
         <fieldset>
@@ -63,7 +63,7 @@ $blood_groups = array(
                 	<?php 
                 	if(!empty($this->Form->data['Student']['image'])) {
                 		echo "<div class=\"thumbnail-item\">";
-                		echo $this->Html->image('../files/students_images/'.$this->form->data['Student']['image']);
+                		echo $this->Html->image('../files/students_images/'.$this->Form->data['Student']['image']);
                 		echo "</div>";
                 	}?>
                     <?php echo $this->Form->input('image',array('label' => false,'class'=>'form-control', 'type'=>'file')); ?>
