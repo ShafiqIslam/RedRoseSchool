@@ -80,17 +80,6 @@
 
 
 <!-- Text editor -->
-<style type="text/css">
-	.nicEdit-selected {
-	    border: none !important;
-	    overflow: auto !important;
-	    outline: none !important;
-
-	    -webkit-box-shadow: none !important;
-	    -moz-box-shadow: none !important;
-	    box-shadow: none !important;
-	}
-</style>
 <script type="text/javascript">
     var i_path = "<?php echo $this->webroot;?>img/nicEditorIcons.gif";
 </script>

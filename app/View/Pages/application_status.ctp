@@ -2,9 +2,7 @@
 	<?php if(empty($is_exist)) { ?>
 		<?php if(!empty($msg) && $msg==1) { ?>
 			<div class="application_invalid">
-				<p>টোকেন নং ভুল! পুনরায় চেষ্টা করুন, অথবা আপনার অ্যাপ্লিকেশন মুছে ফেলা হতে পারে, সেক্ষেত্রে, <a href="<?php echo $this->webroot?>contact">কর্তৃপক্ষের 
-
-সাথে যগাযোগ করুন।<span><i class="fa fa-external-link fa-lg"></i></span></a>.</p>
+				<p>টোকেন নং ভুল! পুনরায় চেষ্টা করুন, অথবা আপনার অ্যাপ্লিকেশন মুছে ফেলা হতে পারে, সেক্ষেত্রে, <a href="<?php echo $this->webroot?>contact">কর্তৃপক্ষের সাথে যগাযোগ করুন।<span><i class="fa fa-external-link fa-lg"></i></span></a>.</p>
 			</div>
 		<?php } ?>
 			<div class="col-sm-offset-4">

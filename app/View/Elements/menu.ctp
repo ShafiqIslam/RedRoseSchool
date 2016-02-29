@@ -46,26 +46,6 @@
             </li>
         <?php } ?>
 
-		<li class="node <?php if(in_array($controller, $accounting_controllers) || ($controller=='users' && $action=='dashboard_accounting')) echo 'selected';?>">
-			<?php echo $this->Html->link(__('Accountings'), array('controller' => 'users' ,'action' => 'dashboard_accounting', 'admin' => true)); ?>
-		</li>
-		<?php
-        if(in_array($controller, $accounting_controllers) || ($controller=='users' && $action=='dashboard_accounting')) {
-        ?>
-            <li class="add a-s <?php if($controller == 'accountings' && $action == 'add') echo 'selected';?>">
-                <?php echo $this->Html->link(__('Add'), array('controller' => 'accountings', 'action' => 'add')); ?>
-            </li>
-            <li class="add a-s <?php if($controller == 'accountings' && $action == 'index' && $method==0) echo 'selected';?>">
-            	<?php echo $this->Html->link(__('Debits'), array('controller' => 'accountings', 'action' => 'index', 0)); ?>
-            </li>
-            <li class="add a-s <?php if($controller == 'accountings' && $action == 'index' && $method==1) echo 'selected';?>">
-            	<?php echo $this->Html->link(__('Credits'), array('controller' => 'accountings', 'action' => 'index', 1)); ?>
-            </li>
-            <li class="add a-s <?php if($controller == 'categories') echo 'selected';?>">
-            	<?php echo $this->Html->link(__('Manage Categories'), array('controller' => 'categories', 'action' => 'index', 'admin' => true)); ?>
-            </li>
-        <?php } ?>
-
         <li class="node <?php if(in_array($controller, $administration_controllers) || ($controller=='users' && $action=='dashboard_administration')) echo 'selected';?>">
         	<?php echo $this->Html->link(__('Administration'), array('controller' => 'users' ,'action' => 'dashboard_administration', 'admin' => true)); ?>
         </li>
@@ -92,7 +72,7 @@
         <?php
         if($controller=='messages') {
         ?>
-            <li class="add a-s <?php if($controller == 'messages' && $action='add') echo 'selected';?>">
+            <li class="add a-s <?php if($controller == 'messages' && $action == 'compose') echo 'selected';?>">
                 <?php echo $this->Html->link(__('Compose'), array('controller' => 'messages', 'action' => 'compose')); ?>
             </li>
         <?php } ?>
@@ -111,6 +91,26 @@
             </li>
             <li class="add a-s <?php if($controller == 'news') echo 'selected';?>">
             	<?php echo $this->Html->link(__('News'), array('controller' => 'news', 'action' => 'index', 'admin' => true)); ?>
+            </li>
+        <?php } ?>
+
+        <li class="node <?php if(in_array($controller, $accounting_controllers) || ($controller=='users' && $action=='dashboard_accounting')) echo 'selected';?>">
+            <?php echo $this->Html->link(__('Accountings'), array('controller' => 'users' ,'action' => 'dashboard_accounting', 'admin' => true)); ?>
+        </li>
+        <?php
+        if(in_array($controller, $accounting_controllers) || ($controller=='users' && $action=='dashboard_accounting')) {
+        ?>
+            <li class="add a-s <?php if($controller == 'accountings' && $action == 'add') echo 'selected';?>">
+                <?php echo $this->Html->link(__('Add'), array('controller' => 'accountings', 'action' => 'add')); ?>
+            </li>
+            <li class="add a-s <?php if($controller == 'accountings' && $action == 'index' && $method==0) echo 'selected';?>">
+                <?php echo $this->Html->link(__('Debits'), array('controller' => 'accountings', 'action' => 'index', 0)); ?>
+            </li>
+            <li class="add a-s <?php if($controller == 'accountings' && $action == 'index' && $method==1) echo 'selected';?>">
+                <?php echo $this->Html->link(__('Credits'), array('controller' => 'accountings', 'action' => 'index', 1)); ?>
+            </li>
+            <li class="add a-s <?php if($controller == 'categories') echo 'selected';?>">
+                <?php echo $this->Html->link(__('Manage Categories'), array('controller' => 'categories', 'action' => 'index', 'admin' => true)); ?>
             </li>
         <?php } ?>
 

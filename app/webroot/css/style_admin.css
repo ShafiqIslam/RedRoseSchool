@@ -233,7 +233,7 @@ img{
 	padding-left: 10px;
 }
 .actions li.feedback a, .actions li.video_vault a, .actions li.real_time a, .actions li.word_clouds a, li.a-s a {
-	padding-left: 25px !important;
+	padding-left: 10px !important;
 }
 .actions li.feedback {
 	background-image: url(../img/feedback-icon-menu.png);
@@ -312,12 +312,12 @@ a:hover{
 }*/
 .actions li.add{
 	/*background-image: url(../img/add-doc.png);*/
-	margin-left: 10px;
+	margin-left: 25px;
 	
 }
 .actions li.add_2{
 	/*background-image: url(../img/add-doc.png);*/
-	margin-left: 30px;
+	margin-left: 50px;
 	
 }
 /*.actions li.real_time{
@@ -1042,5 +1042,13 @@ table td.actions a.d_d {
 	margin-top: 25px
 }
 
+.nicEdit-selected {
+    border: none !important;
+    overflow: auto !important;
+    outline: none !important;
 
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
 

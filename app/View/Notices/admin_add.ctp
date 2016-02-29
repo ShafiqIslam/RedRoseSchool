@@ -32,3 +32,18 @@
         <?php echo $this->Form->end(); ?>
     </div>
 </div>
+
+<!-- Text editor -->
+<script type="text/javascript">
+    var i_path = "<?php echo $this->webroot;?>img/nicEditorIcons.gif";
+</script>
+<?php echo $this->Html->script(array('nicEdit')); ?>
+<script type="text/javascript">
+//<![CDATA[
+    bkLib.onDomLoaded(function() { 
+      nicEditors.allTextAreas(); 
+      $('div.text_area>div').each(function(){$(this).width("100%");});
+      $('div.text_area').removeAttr('style');
+    });
+//]]>
+</script>

@@ -54,6 +54,7 @@ echo $this->Html->script(array('jquery-1.9.1', 'jquery.magnific-popup'));
         <h2>
             <?php echo __('Teacher'); ?>
             <?php echo $this->Html->link(__('Add New Teacher'), array('action' => 'add'), array( 'class' => 'btn btn-success', 'style' => 'margin-left:30px')); ?>
+            <?php echo $this->Html->link(__('Send Message To All Teachers'), array('controller'=>'messages', 'action' => 'send_sms_to_all_teacher'), array( 'class' => 'btn btn-success pull-right')); ?>
         </h2>
 
         <div class="form-horizontal">
@@ -93,6 +94,9 @@ echo $this->Html->script(array('jquery-1.9.1', 'jquery.magnific-popup'));
                 	</td>
 					<td class="actions" style="white-space: nowrap;">
                     <span class="tacher_btn">
+                        <a class="btn btn-info" href="<?php echo $this->webroot?>admin/messages/send_sms_to_teacher/<?php echo $teacher['Teacher']['id']?>">
+                            <span><i class="fa fa-envelope-o"></i></span>
+                        </a>
                         <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $teacher['Teacher']['id']), array( 'class' => 'btn btn-info')); ?>
                         <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $teacher['Teacher']['id']), array( 'class' => 'btn btn-info'), __('Are you sure you want to delete %s?', $teacher['Teacher']['name']));  ?>
                     </span>

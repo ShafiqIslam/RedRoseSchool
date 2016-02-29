@@ -23,6 +23,8 @@
                 echo $this->Html->link($i, array('action' => 'list', $session, $class_name_id, $i), array( 'class' => $btn, 'style'=>'margin-right:10px;'));
             } 
             ?>
+
+            <?php echo $this->Html->link(__('Send Message To All Students'), array('controller'=>'messages', 'action' => 'send_result_to_students', $session, $class_name_id, $term), array( 'class' => 'btn btn-success pull-right')); ?>
         </h2>
 
         <div class="form-horizontal">

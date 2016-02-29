@@ -34,7 +34,7 @@
         </div>
 
         <h2>
-            <?php echo __('Inbox'); ?>
+            <?php echo __('Sent Messages'); ?>
         </h2>
 
         <div class="form-horizontal">
