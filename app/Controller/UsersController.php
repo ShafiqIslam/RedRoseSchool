@@ -98,14 +98,6 @@ class UsersController extends AppController {
             $is_exist = $this->User->find('first', $query);
             if(!empty($is_exist)){
                 $this->Auth->login($this->request->data['User']);
-                // logged in
-                // did they select the remember me checkbox?
-                if ($this->request->data['User']['remember_me'] == 1) {
-                    unset($this->request->data['User']['remember_me']);
-                    $this->request->data['User']['password'] = $this->Auth->password($this->request->data['User']['password']);
-                    $this->Cookie->write('remember_me_cookie', $this->request->data['User'], true, '2 weeks');
-                }
-
                 $this->redirect(array('action' => 'dashboard', 'admin' => true));
             }else{
                 $this->Auth->logout();
