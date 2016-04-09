@@ -37,7 +37,7 @@
         <?php if($general_data['General']['online_admission_on']) { ?>
         <div>
           <div class="admission">
-            <h1>রেড রোজ স্কুলের অনলাইন ভর্তি প্রক্রিয়া </h1>
+            <h1>অনলাইন ভর্তি প্রক্রিয়া </h1>
             <hr class="admission-h1-border">
               <p><?php echo $general_data['General']['admission_msg']; ?></p>
             <div class="button online_apply">
@@ -55,7 +55,7 @@
         <!--==============About School===============-->
         <div>
           <div class="about-schhol">
-            <h1>রেড রোজ নার্সারি স্কুল </h1>
+            <h1>রেড রোজ নার্সারী স্কুল</h1>
             <hr class="about-schhol-border">
             <p><?php echo $general_data['General']['about']; ?></p>
           </div>

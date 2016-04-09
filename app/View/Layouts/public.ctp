@@ -46,7 +46,7 @@
           <a href="<?php echo $this->webroot;?>"><img class="img-responsive logo" src="<?php echo $this->webroot;?>img/logo.jpg" alt="রেড রোজ স্কুল লোগো" /></a>
         </div>
         <div class="col-sm-10">
-          <a href="<?php echo $this->webroot;?>"><h1>রেড রোজ নার্সারি স্কুল</h1></a>
+          <a href="<?php echo $this->webroot;?>"><h1>রেড রোজ নার্সারী স্কুল</h1></a>
         </div>
       </div>
     </div>    
