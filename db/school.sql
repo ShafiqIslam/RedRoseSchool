@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50516
+Source Server         : local
+Source Server Version : 50617
 Source Host           : localhost:3306
 Source Database       : school
 
 Target Server Type    : MYSQL
-Target Server Version : 50516
+Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-02-26 02:01:48
+Date: 2016-04-09 20:12:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -100,8 +100,6 @@ CREATE TABLE `class_names` (
 INSERT INTO `class_names` VALUES ('1', 'à¦ªà§à¦°à¦¥à¦®', '1', '2016-02-14 07:36:38', '2016-02-14 07:36:38');
 INSERT INTO `class_names` VALUES ('2', 'à¦¦à§à¦¬à¦¿à¦¤à§€à§Ÿ', '1', '2016-02-13 19:15:18', '2016-02-14 17:47:30');
 INSERT INTO `class_names` VALUES ('3', 'à¦¤à§ƒà¦¤à§€à§Ÿ', '1', '2016-02-13 19:15:53', '2016-02-14 17:47:39');
-INSERT INTO `class_names` VALUES ('4', 'à¦šà¦¤à§à¦°à§à¦¥', null, '2016-02-13 19:16:30', '2016-02-13 19:16:30');
-INSERT INTO `class_names` VALUES ('5', 'à¦ªà¦žà§à¦šà¦®', null, '2016-02-13 19:18:11', '2016-02-13 19:18:11');
 
 -- ----------------------------
 -- Table structure for `general`
@@ -197,20 +195,24 @@ CREATE TABLE `messages` (
   `in_out` tinyint(1) DEFAULT NULL,
   `sender_name` varchar(255) DEFAULT NULL,
   `sender_mail` varchar(255) DEFAULT NULL,
-  `sender_phone` varchar(11) DEFAULT NULL,
-  `receiver_name` varchar(11) DEFAULT NULL,
-  `receiver_phone` varchar(11) DEFAULT NULL,
+  `sender_phone` varchar(15) DEFAULT NULL,
+  `receiver_name` varchar(255) DEFAULT NULL,
+  `receiver_phone` varchar(15) DEFAULT NULL,
   `subject` varchar(255) DEFAULT NULL,
   `text` varchar(500) DEFAULT NULL,
   `status` tinyint(1) DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of messages
 -- ----------------------------
+INSERT INTO `messages` VALUES ('1', '0', null, null, null, 'Shafiq', '88017318581', 'Test', 'This is a test flight for messaging....', '1', '2016-04-09 15:55:21', '2016-04-09 15:55:21');
+INSERT INTO `messages` VALUES ('2', '0', null, null, null, 'Bappy', '8801939307710', 'Test', 'This is a test flight message.......', '1', '2016-04-09 15:57:50', '2016-04-09 15:57:50');
+INSERT INTO `messages` VALUES ('3', '0', null, null, null, 'Shafiq, Bappy', '8801731858108', 'Test', 'This is test flight....', '1', '2016-04-09 16:00:54', '2016-04-09 16:00:54');
+INSERT INTO `messages` VALUES ('4', '0', null, null, null, 'Shafiq, Bappy', '8801940029819', 'Test', 'This is test flight....', '1', '2016-04-09 16:00:55', '2016-04-09 16:00:55');
 
 -- ----------------------------
 -- Table structure for `news`
