@@ -46,7 +46,7 @@
           <a href="<?php echo $this->webroot;?>"><img class="img-responsive logo" src="<?php echo $this->webroot;?>img/logo.jpg" alt="রেড রোজ স্কুল লোগো" /></a>
         </div>
         <div class="col-sm-10">
-          <a href="<?php echo $this->webroot;?>"><h1>রেড রোজ নার্সারি স্কুল</h1></a>
+          <a href="<?php echo $this->webroot;?>"><h1>রেড রোজ নার্সারী স্কুল</h1></a>
         </div>
       </div>
     </div>    
@@ -106,7 +106,7 @@
     </div>
     <hr>
     <p class="pull-left">রেড রোজ নার্সারী স্কুল কতৃক সংরক্ষিত</p>
-    <p class="pull-right developer"><a href="#">Developed By XORCODER.COM</a></p>
+    <p class="pull-right developer"><a href="http://www.xorcoder.com" target="_blank">Developed By XORCODER.COM</a></p>
   </footer>
   <?php echo $this->Html->script(array('jquery.eventCalendar', 'jquery.bootstrap.newsbox', 'jquery.superbox', 'custom')); ?>
 </body>
