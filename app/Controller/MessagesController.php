@@ -157,13 +157,16 @@ class MessagesController extends AppController {
 				$this->Message->create();
 				$this->request->data['Message']['in_out'] = 0;
 				$this->request->data['Message']['status'] = 1;
-				$this->request->data['Message']['receiver_phone'] = '+88' . $number;
+				$this->request->data['Message']['receiver_phone'] = '88' . $number;
 
-				// send msg here
+				$text = $this->request->data['Message']['text'];
+				$sms_sent = $this->send_sms($number, $text);
 
-				if ($this->Message->save($this->request->data)) {
-					$count += 1;
-				}	
+				if($sms_sent['success']) {
+					if ($this->Message->save($this->request->data)) {
+						$count += 1;
+					}
+				}
 			}
 
 			if(!empty($this->request->data['return_to'])) {

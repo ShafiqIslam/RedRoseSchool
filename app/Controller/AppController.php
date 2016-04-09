@@ -123,5 +123,70 @@ class AppController extends Controller {
                 }
             }
         }
-    } 
+    }
+
+    public function send_sms($phone, $msg) {
+        $SmsUrl='http://smsgateway121114.localdnszone.com:8080/bulksms/bulksms';
+        $SmsUserName = 'iloc-rosered';
+        $SmsPassword = '873R03';
+        $SenderDestination = '88' . $phone;
+        $SenderNameOrNumber = 'Red%20Rose';
+        $SenderMessage = str_replace(" ","%20", trim($msg));;
+
+        $Q = "$SmsUrl?username=$SmsUserName&password=$SmsPassword&type=0&dlr=0&destination=$SenderDestination&source=$SenderNameOrNumber&message=$SenderMessage";
+        # http://smsgateway121114.localdnszone.com:8080/bulksms/bulksms?username=YOUR_USER_NAME_HERE&password=YOUR_PASSWORD_HERE&type=0&dlr=0&destination=8801000000000&source=My%20Brand&message=This%20is%20a%20test%20message%20!
+
+        utf8_decode($Q);
+        $res = implode ('', file($Q));
+
+        $SmppResult=explode ('|', $res);
+        $SmppResult=$SmppResult['0'];
+
+        $success = false;
+
+        switch ($SmppResult) {
+            case 1701:
+                $success = true;
+                $response = "SMS Sent!";
+                break;
+            case 1702:
+                $response = "Error: SMPP Server Result: $SmppResult - Invalid URL Error.";
+                break;
+            case 1703:
+                $response = "Error: SMPP Server Result: $SmppResult - Invalid value in SMPP username or SMPP password field.</b>";
+                break;
+            case 1704:
+                $response = "Error: SMPP Server Result: $SmppResult - Invalid value in 'type' field.</b>";
+                break;
+            case 1705:
+                $response = "Error: SMPP Server Result: $SmppResult - Invalid Message.";
+                break;
+            case 1706:
+                $response = "Error: SMPP Server Result: $SmppResult - Invalid Destination.";
+                break;
+            case 1707:
+                $response = "Error: SMPP Server Result: $SmppResult - Invalid Source (Sender).";
+                break;
+            case 1708:
+                $response = "Error: SMPP Server Result: $SmppResult - Invalid value for 'dlr' field.";
+                break;
+            case 1709:
+                $response = "Error: SMPP Server Result: $SmppResult - User validation failed.";
+                break;
+            case 1710:
+                $response = "Error: SMPP Server Result: $SmppResult - Internal Error.";
+                break;
+            case 1025:
+                $response = "Error: SMPP Server Result: $SmppResult - Insufficient Credit in SMPP Account.";
+                break;
+
+            default:
+                $response = "Error: SMPP Server Result: $SmppResult - Unknown Error! Please contact to Admin.";
+
+        }
+
+        $data['success'] = $success;
+        $data['response'] = $response;
+        return $data;
+    }
 }
