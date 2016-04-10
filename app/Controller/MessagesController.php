@@ -40,6 +40,10 @@ class MessagesController extends AppController {
     	$this->set(compact('balance', 'not_read', 'not_sent'));
     }
 
+	public function admin_balance() {
+		
+	}
+
 	public function public_report() {
 		if($this->request->is('post')) {
 			$this->Message->create();

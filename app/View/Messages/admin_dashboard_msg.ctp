@@ -45,7 +45,7 @@
                 </a>
             </div>
             <div class="col-md-3 col-sm-3">
-                <a href="http://rsc.mysmscp.com/RSmsPlus/websms/creditHistory.psms" target="_blank">
+                <a href="<?php echo $this->Html->url(array('controller' => 'messages', 'action' => 'balance', 'admin' => true)) ?>" target="_blank">
                     <div class="realtime t-color">
                         <span>Balance</span>
                         <div class="all-desc">
