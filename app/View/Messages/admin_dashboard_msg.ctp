@@ -45,14 +45,14 @@
                 </a>
             </div>
             <div class="col-md-3 col-sm-3">
-                <a href="#">
+                <a href="http://rsc.mysmscp.com/RSmsPlus/websms/creditHistory.psms" target="_blank">
                     <div class="realtime t-color">
                         <span>Balance</span>
                         <div class="all-desc">
                             <div class="pull-right">
                                 <span><i class="fa fa-user fa-5x"></i></span>
                             </div>
-                            <p class="count-num"><?php echo $balance;?></p>
+                            <p class="count-num"><?php //echo $balance;?></p>
                         </div>
                     </div>
                 </a>
