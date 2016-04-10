@@ -152,20 +152,23 @@ class MessagesController extends AppController {
 	public function admin_compose() {
 		if ($this->request->is('post')) {
 			$count = 0;
+			$error_count = 0;
 			$numbers = explode(',', $this->request->data['Message']['numbers']);
 			foreach ($numbers as $key => $number) {
 				$this->Message->create();
 				$this->request->data['Message']['in_out'] = 0;
-				$this->request->data['Message']['status'] = 1;
 				$this->request->data['Message']['receiver_phone'] = '88' . $number;
 
 				$text = $this->request->data['Message']['text'];
 				$sms_sent = $this->send_sms($number, $text);
 
-				if($sms_sent['success']) {
-					if ($this->Message->save($this->request->data)) {
+				$this->request->data['Message']['status'] = $sms_sent['success'];
+				$this->request->data['Message']['status_message'] = $sms_sent['response'];
+				if ($this->Message->save($this->request->data)) {
+					if($sms_sent['success'])
 						$count += 1;
-					}
+					else
+						$error_count += 1;
 				}
 			}
 
@@ -183,7 +186,11 @@ class MessagesController extends AppController {
 				return $this->redirect($redirect_array);
 			}
 
-			$this->Session->setFlash($count . ' message has been sent successfully.');
+			$flash_message = "";
+			if($count) $flash_message .= $count . ' message has been sent successfully.';
+			if($error_count) $flash_message .= $error_count . ' message sending failed.';
+
+			$this->Session->setFlash($flash_message);
 			return $this->redirect(array('action' => 'sent'));
 		}
 	}
@@ -358,7 +365,7 @@ class MessagesController extends AppController {
 
 		if($session==null || $session>date('Y') || $session<2016) {
 			$this->Session->setFlash(__('Invalid Session.'));
-			return $this->redirect(array('controller'=>'results', 'action' => 'list', $session, $class_name_id, $term));
+			return $this->redirect(array('controller'=>'students', 'action' => 'list', $session, $class_name_id));
 		}
 
 		$students = $this->Student->find('list', array(
@@ -379,5 +386,23 @@ class MessagesController extends AppController {
 
 		$this->set(compact('receiver_name', 'subject', 'receiver', 'message', 'return_to', 'flash_msg'));
 		$this->render('admin_compose_with_data');
+	}
+
+	public function automatic_message($number, $msg, $subject, $name) {
+		$this->Message->create();
+		$data['Message']['in_out'] = 0;
+		$data['Message']['subject'] = $subject;
+		$data['Message']['receiver_name'] = $name;
+		$data['Message']['status'] = 1;
+		$data['Message']['receiver_phone'] = '88' . $number;
+		$data['Message']['text'] = $msg;
+
+		$sms_sent = $this->send_sms($number, $msg);
+		$this->request->data['Message']['status'] = $sms_sent['success'];
+		$this->request->data['Message']['status_message'] = $sms_sent['response'];
+		if ($this->Message->save($this->request->data)) {
+			return true;
+		}
+		return false;
 	}
 }

@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('MessagesController', 'Controller');
 
 class OnlineApplicationsController extends AppController {
 
@@ -63,6 +64,9 @@ class OnlineApplicationsController extends AppController {
 		if (!$this->OnlineApplication->exists()) {
 			throw new NotFoundException(__('Invalid online application'));
 		}
+
+		$options = array('conditions' => array('OnlineApplication.' . $this->OnlineApplication->primaryKey => $id));
+		$data = $this->OnlineApplication->find('first', $options);
 		
 		if($change==null) {
 			return $this->redirect(array('action' => 'edit', $id));
@@ -73,18 +77,32 @@ class OnlineApplicationsController extends AppController {
 
 			$data['OnlineApplication']['pdf_link'] = "";
 			$this->OnlineApplication->save($data);
+
+			$message_obj = new MessagesController();
+			$number = $data['OnlineApplication']['mobile'];
+			$msg = "Your application (token: " . $data['OnlineApplication']['token'] . ") has been granted. Contact with administration to follow with fees and documents. Thanks for using our online application service.";
+			$name = $data['OnlineApplication']['name_en'];
+
+			$message_obj->automatic_message($number, $msg, "Online Application Granted", $name);
+
 			return $this->redirect(array('action' => 'edit', $id));
 		} elseif($change==2) {
 			$data['OnlineApplication']['status'] = "Declined";
 			$this->OnlineApplication->save($data);
+
+			$message_obj = new MessagesController();
+			$number = $data['OnlineApplication']['mobile'];
+			$msg = "Your application (token: " . $data['OnlineApplication']['token'] . ") has been declined. If you have any inquiry contact authority. Thanks for using our online application service.";
+			$name = $data['OnlineApplication']['name_en'];
+
+			$message_obj->automatic_message($number, $msg, "Online Application Declined", $name);
+
 			return $this->redirect(array('action' => 'edit', $id));
 		} elseif($change==4) {
 			$data['OnlineApplication']['status'] = "In Queue";
 			$this->OnlineApplication->save($data);
 			return $this->redirect(array('action' => 'edit', $id));
 		} elseif($change==3) {
-			$options = array('conditions' => array('OnlineApplication.' . $this->OnlineApplication->primaryKey => $id));
-			$data = $this->OnlineApplication->find('first', $options);
 
 			$exclude_keys = array("id","status","token","pdf_link","created","modified");
 			foreach ($data['OnlineApplication'] as $key => $value) {
@@ -120,6 +138,14 @@ class OnlineApplicationsController extends AppController {
 
 			$s_data['OnlineApplication']['status'] = "Admitted";
 			$this->OnlineApplication->save($s_data);
+
+			$message_obj = new MessagesController();
+			$number = $student_data['Student']['mobile'];
+			$msg = "Your application (token: " . $data['OnlineApplication']['token'] . ") has been admitted. If you have any inquiry contact authority. Thanks for using our online application service.";
+			$name = $student_data['Student']['name_en'];
+
+			$message_obj->automatic_message($number, $msg, "Online Application Admitted", $name);
+
 			return $this->redirect(array('action' => 'index'));
 		}
 	}
@@ -184,11 +210,12 @@ class OnlineApplicationsController extends AppController {
 			$this->request->data['OnlineApplication']['token'] = time();
 			$this->OnlineApplication->create();
 			if ($this->OnlineApplication->save($this->request->data)) {
-				/*
-				*
-				* Send Message Here
-				*
-				*/
+
+				$message_obj = new MessagesController();
+				$number = $this->request->data['OnlineApplication']['mobile'];
+				$msg = "Thanks for applying. Your application has been received with token no: " . $this->request->data['OnlineApplication']['token'] . ". Please remember this number.";
+				$name = $this->request->data['OnlineApplication']['name_en'];
+				$message_obj->automatic_message($number, $msg, "online Application Received", $name);
 
 				return $this->redirect(array('action' => 'public_complete', 1, $this->request->data['OnlineApplication']['token']));
 			} else {

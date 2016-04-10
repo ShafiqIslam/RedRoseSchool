@@ -187,6 +187,16 @@
 				</div>
 		    </div>
 
+			<div class="form-group">
+				<label class="control-label col-sm-5"><b>যোগাযোগ মোবাইল (এই নম্বরটিতে বার্তা পাবেন):<b></label>
+				<div class="col-sm-7 inputGroupContainer">
+					<div class="input-group">
+						<span class="input-group-addon">+৮৮</span>
+						<input type="number" name="data[OnlineApplication][mobile]" class="form-control" id="usr" placeholder="" required>
+					</div>
+				</div>
+			</div>
+
 		    <div class="form-group">
             	<label for="inputEmail3" class="col-sm-5 control-label"></label>
                 <div class="col-sm-7">
