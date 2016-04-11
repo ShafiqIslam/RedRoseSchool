@@ -28,7 +28,7 @@
               <ul class="dropdown-menu">
                 <li><a href="<?php echo $this->webroot;?>guardian">অভিভাবকদের</a></li>
                 <li><a href="<?php echo $this->webroot;?>dress">পোশাক কোড</a></li>
-                <li><a href="<?php echo $this->webroot;?>dress">পাঠ্যতালিকা </a></li>
+                <li><a href="<?php echo $this->webroot;?>text_list">পাঠ্যতালিকা </a></li>
                 <li><a href="<?php echo $this->webroot;?>syllabus">সিলেবাস</a></li>
                 <li><a href="<?php echo $this->webroot;?>suggestion">সাজেশন</a></li>
               </ul>
