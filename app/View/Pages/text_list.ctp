@@ -25,21 +25,10 @@
 		<?php foreach ($classNames as $key => $className) { ?>
 		    <div role="tabpanel" class="tab-pane fade in <?php if($key==0) echo 'active';?>" id="<?php echo $className['ClassName']['name'];?>">
 				<table class="table table-bordered routin_table">
-					<h2>ক্লাস রুটিন</h2>
+					<h2>পাঠ্যতালিকা</h2>
 					<h3>শ্রেণী : <?php echo $className['ClassName']['name'];?></h3>
 					<?php $class_id = $className['ClassName']['id'];?>
 			      <tr>
-			        <th>বার</th>
-			        <th>১ম ঘণ্টা</th>
-			        <th>২য় ঘণ্টা</th>
-			        <th>৩য় ঘণ্টা</th>
-			        <th rowspan="7">
-			          <h3>বি</h3>
-			          <h3>র</h3>
-			          <h3>তি</h3>
-			      	</th>
-			        <th>৪রথ ঘণ্টা</th>
-			        <th>৫ম ঘণ্টা</th>
 			      </tr>
 			    	
 			    <?php foreach ($week_days_en as $k => $day) { ?>
