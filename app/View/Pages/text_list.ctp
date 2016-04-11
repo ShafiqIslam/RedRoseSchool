@@ -1,6 +1,5 @@
 <div class="container main-content academic">
 	<h1>পাঠ্যতালিকা</h1>
-	<hr>
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
 			<table class="table table-responsive booklist">
@@ -12,8 +11,9 @@
 				<?php foreach ($syllabi as $key => $item) { ?>
 				<tr>
 					<td><p><?php echo $item['ClassName']['name'];?></p></td>
-					<td><a href="<?php echo $this->webroot.'files/syllabi/'.$item['Syllabus']['file'];?>" target="_blank"><span><i class="fa fa-file-pdf-o fa-3x"></i></span></a></td>	
+					<td><a href="<?php echo $this->webroot.'files/syllabi/'.$item['Syllabus']['file'];?>" target="_blank"><span><i class="fa fa-file-pdf-o fa-3x"></i></span></a></td><hr>
 				</tr>
+
 				<?php } ?>
 			</table>
 		</div>
