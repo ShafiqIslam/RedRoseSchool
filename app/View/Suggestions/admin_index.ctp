@@ -64,7 +64,7 @@
                 <tr>
                 	<td><?php echo h($suggestion['ClassName']['name']);?></td>
 					<td><?php echo h($suggestion['Suggestion']['title']); ?>&nbsp;</td>
-                    <td><?php if(!empty($suggestion['Suggestion']['file'])) { ?><a href="<?php echo $this->webroot.'files/syllabi/'.$suggestion['Suggestion']['file'];?>" target="_blank"><?php echo $suggestion['Suggestion']['file'];?></a><?php } ?>&nbsp;</td>
+                    <td><?php if(!empty($suggestion['Suggestion']['file'])) { ?><a href="<?php echo $this->webroot.'files/suggestions/'.$suggestion['Suggestion']['file'];?>" target="_blank"><?php echo $suggestion['Suggestion']['file'];?></a><?php } ?>&nbsp;</td>
                     <td><?php echo date_format(date_create($suggestion['Suggestion']['created']), 'd M Y'); ?>&nbsp;</td>
                     <td class="actions" style="white-space: nowrap;">
                         <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $suggestion['Suggestion']['id']), array( 'class' => 'btn btn-info')); ?>
