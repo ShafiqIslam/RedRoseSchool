@@ -105,9 +105,12 @@
       </div>
     </div>
     <hr>
-    <p class="pull-left">রেড রোজ নার্সারী স্কুল কতৃক সংরক্ষিত</p>
-    <p class="pull-right developer"><a href="http://www.xorcoder.com" target="_blank">Developed By XORCODER.COM</a></p>
+    <div class="container">
+      <p class="pull-left">রেড রোজ নার্সারী স্কুল কতৃক সংরক্ষিত</p>
+      <p class="pull-right developer"><a href="http://www.xorcoder.com" target="_blank">Developed By XORCODER.COM</a></p>
+  </div>
   </footer>
+  
   <?php echo $this->Html->script(array('jquery.eventCalendar', 'jquery.bootstrap.newsbox', 'jquery.superbox', 'custom')); ?>
 </body>
 </html>

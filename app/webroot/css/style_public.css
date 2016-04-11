@@ -574,7 +574,9 @@ header h1{
 
 
 /*-----------------Gallery CSS--------------*/
-
+.gallery h2{
+	margin-bottom: 20px;
+}
 .MyGallery .images p{
 	width: 15.4%;
 	display: block;
@@ -840,11 +842,11 @@ footer ul li{
 }
 
 footer .pull-left{
-    margin-left: 5%;
+    //margin-left: 5%;
 }
 
 footer .developer{
-    margin-right: 5%;
+    //margin-right: 5%;
 }
 .glyphicon-menu-right:before {
     margin-right: 5px;
