@@ -380,6 +380,19 @@ header h1{
 .suggrstion .fa{
 	color: red;
 }
+
+
+/*===========book list page==================*/
+.booklist th, .booklist p, .booklist a{
+	text-align: center;
+}
+
+.booklist{
+	font-size: 17px;
+}
+
+
+
 /*=================ABOUT SCHOOL====================*/
 
 .about-schhol {
