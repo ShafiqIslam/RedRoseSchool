@@ -415,6 +415,10 @@ header h1{
 	text-align: justify;
 }
 
+#chairman, #headmaster, #mang-commitee, #goal{
+	//top: 100%;
+}
+
 
 
 /*--------------------------------------
@@ -568,7 +572,15 @@ header h1{
 	font-size: 17px;
     line-height: 23px;
     word-spacing: 2px;
-    text-align: justify;
+    //text-align: justify;
+}
+
+.academic td{
+	text-align: center;
+}
+
+.academic td .fa{
+	color: red;
 }
 /*----------------end of ACADEMIC CSS--------*/
 
