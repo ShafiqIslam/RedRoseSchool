@@ -8,17 +8,14 @@
 					<th>পাঠ্যতালিকা</th>
 				</tr>
 
-				<?php //foreach ($syllabi as $key => $item) { ?>
 				<tr>
-					<td><p><?php //echo $item['ClassName']['name'];?>Class-1</p></td>
-					<td><a href="<?php //echo $this->webroot.'files/syllabi/'.$item['Syllabus']['file'];?>" target="_blank"><span><i class="fa fa-file-pdf-o fa-3x"></i></span></a></td><hr>
+					<td><p>Class-1</p></td>
+					<td><a href="#" target="_blank"><span><i class="fa fa-file-pdf-o fa-3x"></i></span></a></td><hr>
 				</tr>
 				<tr>
-					<td><p><?php //echo $item['ClassName']['name'];?>Class-2</p></td>
-					<td><a href="<?php //echo $this->webroot.'files/syllabi/'.$item['Syllabus']['file'];?>" target="_blank"><span><i class="fa fa-file-pdf-o fa-3x"></i></span></a></td><hr>
+					<td><p>Class-2</p></td>
+					<td><a href="#" target="_blank"><span><i class="fa fa-file-pdf-o fa-3x"></i></span></a></td><hr>
 				</tr>
-
-				<?php// } ?>
 			</table>
 		</div>
     </div>
