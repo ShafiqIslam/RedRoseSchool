@@ -2,7 +2,7 @@
     $(function () {
         $("#go").on('click', function () {
             var to = $.trim($('#send_to').val());
-            var notice_id = "<?php echo $this->form->data['Notice']['id'];?>";
+            var notice_id = "<?php echo $this->Form->data['Notice']['id'];?>";
             location.href = ROOT + 'admin/messages/send_notice/' + notice_id + '/to:' + to;
         });
     });
@@ -18,7 +18,7 @@
                 <label for="inputEmail3" class="col-sm-3 control-label">Send this Notice To: </label>
                 <div class="col-sm-3">
                     <?php echo $this->Form->input('send_to',array('label' => false, 'class'=>'form-control', 'id'=> 'send_to', 'options'=>array('everyone'=>'Everyone', 'students'=>'Students', 'teachers'=>'Teachers'))); ?>
-                    <?php echo $this->Form->input('notice_id',array('label' => false, 'type'=>'hidden', 'id'=> 'notice_id', 'value' => $this->form->data['Notice']['id'])); ?>
+                    <?php echo $this->Form->input('notice_id',array('label' => false, 'type'=>'hidden', 'id'=> 'notice_id', 'value' => $this->Form->data['Notice']['id'])); ?>
                 </div>
                 <div class="col-sm-1">
                     <?php
@@ -47,9 +47,9 @@
                 <label for="inputEmail3" class="col-sm-3 control-label">Image</label>
                 <div class="col-sm-9">
                 	<?php 
-                	if(!empty($this->form->data['Notice']['featured_img'])) {
+                	if(!empty($this->Form->data['Notice']['featured_img'])) {
                 		echo "<div class=\"thumbnail-item\">";
-                		echo $this->Html->image('../files/feature_photos/'.$this->form->data['Notice']['featured_img']);
+                		echo $this->Html->image('../files/feature_photos/'.$this->Form->data['Notice']['featured_img']);
                 		echo "</div>";
                 	}?>
                     <?php echo $this->Form->input('featured_img',array('label' => false,'class'=>'form-control', 'type'=>'file')); ?>
