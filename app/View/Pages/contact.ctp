@@ -17,7 +17,7 @@
 							<a href="tel:+88<?php echo $general_data['General']['phone']?>">
 								<span>
 									<i class="glyphicon glyphicon-earphone"></i>  :  
-									+880<?php echo $general_data['General']['phone']?>
+									0<?php echo $general_data['General']['phone']?>
 								</span>
 							</a><br>
 							<a href="mailto:<?php echo $general_data['General']['mail']?>">
