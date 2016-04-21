@@ -91,7 +91,7 @@
 		<div style="clear:both"></div>
 
 		<div class="data">
-			<p><b>ছাত্র/ছাত্রীর পূর্ণ নাম(বাংলায়):</b> <strong><?php echo $data['OnlineApplication']['name_bn']; ?></strong></p>
+			<!--<p><b>ছাত্র/ছাত্রীর পূর্ণ নাম(বাংলায়):</b> <strong><?php echo $data['OnlineApplication']['name_bn']; ?></strong></p>-->
 
 		    <p><b>ছাত্র/ছাত্রীর পূর্ণ নাম(ইংরেজীতে):</b> <strong><?php echo $data['OnlineApplication']['name_bn']; ?></strong></p>
 
