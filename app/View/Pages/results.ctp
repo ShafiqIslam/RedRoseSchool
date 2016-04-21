@@ -27,6 +27,16 @@
             } elseif($i==3) {
                 $t = $i . "<sup>rd</sup>";
             }
+
+            $total_highest = 0;
+            $total_total = 0;
+            $total_monthly = 0;
+            $total_terminal = 0;
+            $total_subjects = 0;
+            $total_lg = 0;
+            $total_gpa = 0;
+            $fail_flag = 0;
+            $na_flag = 0;
         ?>
     	<div class="result">
             <h1><?php echo $t;?> Term : <?php echo $student['Student']['session']; ?></h1>
@@ -51,52 +61,118 @@
                                 <td style="color: rgb(255, 255, 255);">Terminal</td>
                                 <td style="color: rgb(255, 255, 255);">Total</td>
                             </tr>
-                            <?php foreach($subjects as $key=>$subject) { ?>
+                            <?php foreach($subjects as $key => $subject) { ?>
                             <tr class="big_box">
                                 <td style="background-color:#C7DDF3;"><?php echo $subject?></td>
+                                <?php $total_subjects++; ?>
                                 <td class="blue_1">100</td>      
                                 <td class="blue_2">40</td>
                                 <td><?php echo $highest[$i][$key];?></td>
+                                <?php $total_highest += $highest[$i][$key];?>
                                 <td>
                                     <?php
-                                    if(!empty($student['Marks'][$i][$key]['monthly'])) 
+                                    if(!empty($student['Marks'][$i][$key]['monthly'])) {
                                         echo $student['Marks'][$i][$key]['monthly'];
+                                        $total_monthly += $student['Marks'][$i][$key]['monthly'];
+                                    }
                                     else
                                         echo "&nbsp;";
                                     ?>
                                 </td>
                                 <td>
                                     <?php 
-                                    if(!empty($student['Marks'][$i][$key]['terminal'])) 
+                                    if(!empty($student['Marks'][$i][$key]['terminal'])) {
                                         echo $student['Marks'][$i][$key]['terminal'];
+                                        $total_terminal += $student['Marks'][$i][$key]['terminal'];
+                                    }
                                     else
                                         echo "&nbsp;";
                                     ?>
                                 </td>
                                 <td>
                                     <?php 
-                                    if(!empty($student['Marks'][$i][$key]['total'])) 
+                                    if(!empty($student['Marks'][$i][$key]['total'])) {
                                         echo $student['Marks'][$i][$key]['total'];
+                                        $total_total += $student['Marks'][$i][$key]['total'];
+                                    }
                                     else
                                         echo "&nbsp;";
                                     ?>
                                 </td>
-                                <td></td>
-                                <td></td>
+                                <?php
+                                    if(!empty($student['Marks'][$i][$key]['total'])) {
+                                        if ($student['Marks'][$i][$key]['total'] >= 80) {
+                                            $lg = "A+";
+                                            $gpa = "5.00";
+                                        } else if($student['Marks'][$i][$key]['total']>=70 && $student['Marks'][$i][$key]['total']<80) {
+                                            $lg = "A";
+                                            $gpa = "4.00";
+                                        } else if($student['Marks'][$i][$key]['total']>=60 && $student['Marks'][$i][$key]['total']<70) {
+                                            $lg = "A-";
+                                            $gpa = "3.50";
+                                        } else if($student['Marks'][$i][$key]['total']>=50 && $student['Marks'][$i][$key]['total']<60) {
+                                            $lg = "B";
+                                            $gpa = "3.00";
+                                        } else if($student['Marks'][$i][$key]['total']>=40 && $student['Marks'][$i][$key]['total']<50) {
+                                            $lg = "C";
+                                            $gpa = "2.00";
+                                        } else if($student['Marks'][$i][$key]['total']<40) {
+                                            $lg = "F";
+                                            $gpa = "0.00";
+
+                                            $fail_flag = 1;
+                                        }
+
+                                        $total_gpa += $gpa;
+                                    } else {
+                                        $lg = "N/A";
+                                        $gpa = "N/A";
+                                        $na_flag = 1;
+                                    }
+                                ?>
+                                <td><?php echo $lg;?></td>
+                                <td><?php echo $gpa;?></td>
                             </tr>
                             <?php } ?>
+
+                            <?php
+                            if($fail_flag) {
+                                $total_gpa = 0.00;
+                            } else {
+                                $total_gpa = $total_gpa / $total_subjects;
+                            }
+                            $total_gpa = number_format((float)$total_gpa, 2, '.', '');
+                            if($total_gpa == 5.00) {
+                                $total_lg = "A+";
+                            } else if ($total_gpa < 5.00 && $total_gpa >= 4.00) {
+                                $total_lg = "A";
+                            } else if ($total_gpa < 4.00 && $total_gpa >= 3.50) {
+                                $total_lg = "A-";
+                            } else if ($total_gpa < 3.50 && $total_gpa >= 3.00) {
+                                $total_lg = "B";
+                            } else if ($total_gpa < 3.00 && $total_gpa >= 2.00) {
+                                $total_lg = "C";
+                            } else if ($total_gpa < 2.00) {
+                                $total_lg = "F";
+                            }
+
+                            if($na_flag) {
+                                $total_gpa = "N/A";
+                                $total_lg = "N/A";
+                            }
+                            ?>
                             <tr class="big_box">
                                 <td style="background-color:#C7DDF3;">Total</td>
-                                <td class="blue_1">0000</td>      
-                                <td class="blue_2">0000</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td class="blue_1"><?php echo $total_subjects*100;?></td>
+                                <td class="blue_2"><?php echo $total_subjects*40;?></td>
+                                <td><?php echo $total_highest;?></td>
+                                <td><?php echo $total_monthly;?></td>
+                                <td><?php echo $total_terminal;?></td>
+                                <td><?php echo $total_total;?></td>
+                                <td><?php echo $total_lg;?></td>
+                                <td><?php echo $total_gpa;?></td>
                             </tr>
-                            <tr class="big_box">
+                            <!--<tr class="big_box">
                                 <td style="background-color:#C7DDF3;">GPA</td>
                                 <td class="blue_1">0000</td>      
                                 <td class="blue_2">0000</td>
@@ -106,7 +182,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>     
-                            </tr>
+                            </tr>-->
                         </table>
                     </div>
                 </div>
