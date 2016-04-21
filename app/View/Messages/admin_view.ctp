@@ -43,6 +43,10 @@
                 <th>Date</th>
                 <td><?php echo date_format(date_create($message['Message']['created']), 'd M Y');?></td>
             </tr>
+            <tr>
+                <th>Status</th>
+                <td><?php echo $message['Message']['status_message']?></td>
+            </tr>
         </table>
         <?php if(!$message['Message']['in_out'] && !$message['Message']['status']) { ?>
             <?php echo $this->Html->link(__('Resend'), array('action' => 'resend', $message['Message']['id']), array( 'class' => 'btn btn-danger')); ?>

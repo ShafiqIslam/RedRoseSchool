@@ -24,7 +24,7 @@ class AppController extends Controller {
         $this->Cookie->key = 'klgjs&*(#fsdfsdfsdf%(54646tqwdsuhf&*^Hjhsdgf5465464';
         $this->Cookie->httpOnly = true;
         if($this->params['admin']){
-            $this->layout =  'admin';
+            $this->layout = 'admin';
         }
         if (!$this->Auth->loggedIn() && $this->Cookie->read('remember_me_cookie')) {
             $cookie = $this->Cookie->read('remember_me_cookie');
@@ -187,6 +187,7 @@ class AppController extends Controller {
 
         $data['success'] = $success;
         $data['response'] = $response;
+        #AuthComponent::_setTrace($data);
         return $data;
     }
 }
