@@ -129,7 +129,7 @@ class OnlineApplicationsController extends AppController {
 			$code_3 = $student_data['Student']['roll_no'];
 			$code_3 = $code_3<10 ? "0".strval($code_3) : strval($code_3);
 
-			$student_data['Student']['code'] = $code_1.$code_2.$code_3;
+			$student_data['Student']['code'] = $code_2.$code_1.$code_3;
 			$student_data['Student']['simple_pwd'] = $this->random_string(6,1);
 			$student_data['Student']['password'] = AuthComponent::password($student_data['Student']['simple_pwd']);
 

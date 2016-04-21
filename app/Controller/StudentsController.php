@@ -5,6 +5,11 @@ class StudentsController extends AppController {
 
 	public $components = array('Paginator', 'Session');
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow('student_login', 'student_login_success', 'student_login_error', 'student_logout');
+	}
+
 	public function admin_index() {
 		if ($this->request->is('post')) {
 			if(!empty($this->request->data['session'])) {
@@ -106,14 +111,17 @@ class StudentsController extends AppController {
 
 	public function admin_add() {
 		if ($this->request->is('post')) {
+			// session
 			$code_1 = $this->request->data['Student']['session'] % 100;
 			$code_1 = $code_1<10 ? "0".strval($code_1) : strval($code_1);
+			// class id
 			$code_2 = $this->request->data['Student']['class_name_id'] % 100;
 			$code_2 = $code_2<10 ? "0".strval($code_2) : strval($code_2);
+			//roll
 			$code_3 = $this->request->data['Student']['roll_no'];
 			$code_3 = $code_3<10 ? "0".strval($code_3) : strval($code_3);
 
-			$this->request->data['Student']['code'] = $code_1.$code_2.$code_3;
+			$this->request->data['Student']['code'] = $code_2.$code_1.$code_3; // as he said
 			$this->request->data['Student']['simple_pwd'] = $this->random_string(6,1);
 			$this->request->data['Student']['password'] = AuthComponent::password($this->request->data['Student']['simple_pwd']);
 			if (!empty($this->request->data['Student']['image']['name'])) {
@@ -148,7 +156,7 @@ class StudentsController extends AppController {
 			$code_3 = $this->request->data['Student']['roll_no'];
 			$code_3 = $code_3<10 ? "0".strval($code_3) : strval($code_3);
 
-			$this->request->data['Student']['code'] = $code_1.$code_2.$code_3;
+			$this->request->data['Student']['code'] = $code_2.$code_1.$code_3;
 			$this->request->data['Student']['password'] = AuthComponent::password($this->request->data['Student']['simple_pwd']);
 
 			if (!empty($this->request->data['Student']['image'])) {
@@ -191,5 +199,77 @@ class StudentsController extends AppController {
 			$this->Session->setFlash(__('The student could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
+	}
+
+	public function student_login() {
+		if($this->request->is('post')) {
+			$password = AuthComponent::password($this->request->data['Student']['password']);
+			$query = array(
+				'conditions' => array(
+					'Student.code' => $this->request->data['Student']['code'],
+					'Student.password' => $password,
+				)
+			);
+
+			$this->Student->recursive = 0;
+			$is_exist = $this->Student->find('first', $query);
+			#AuthComponent::_setTrace($is_exist);
+			if (!empty($is_exist)) {
+				$this->Session->write('student_logged', 1);
+				return $this->redirect(array('action' => 'student_login_success'));
+			} else {
+				return $this->redirect(array('action' => 'student_login_error'));
+			}
+		}
+
+		$page = $subpage = $title_for_layout = "home";
+		$this->set(compact('page', 'subpage', 'title_for_layout'));
+
+		$this->loadModel('News');
+		$this->News->recursive = 0;
+		$latest_news = $this->News->find('all', array(
+			'order' => 'News.created DESC',
+			'limit' => 5
+		));
+		$this->set(compact('latest_news'));
+
+		$this->layout = 'public';
+	}
+
+	public function student_login_success() {
+		$page = $subpage = $title_for_layout = "home";
+		$this->set(compact('page', 'subpage', 'title_for_layout'));
+
+
+		$this->loadModel('News');
+		$this->News->recursive = 0;
+		$latest_news = $this->News->find('all', array(
+			'order' => 'News.created DESC',
+			'limit' => 5
+		));
+		$this->set(compact('latest_news'));
+
+		$this->layout = 'public';
+	}
+
+	public function student_login_error() {
+		$page = $subpage = $title_for_layout = "home";
+		$this->set(compact('page', 'subpage', 'title_for_layout'));
+
+
+		$this->loadModel('News');
+		$this->News->recursive = 0;
+		$latest_news = $this->News->find('all', array(
+			'order' => 'News.created DESC',
+			'limit' => 5
+		));
+		$this->set(compact('latest_news'));
+
+		$this->layout = 'public';
+	}
+
+	public function student_logout() {
+		$this->Session->delete('student_logged');
+		return $this->redirect(array('controller'=>'pages', 'action' => 'display', 'home'));
 	}
 }

@@ -11,6 +11,7 @@
             <tr>
                 <th><?php echo $this->Paginator->sort('name'); ?></th>
                 <th><?php echo $this->Paginator->sort('Class Teacher'); ?></th>
+                <th><?php echo $this->Paginator->sort('Book list'); ?></th>
                 <th class="actions"><?php echo __('Actions'); ?></th>
             </tr>
             <?php foreach ($classNames as $className): ?>
@@ -25,6 +26,7 @@
                         ?>
                         &nbsp;
                     </td>
+                    <td><?php if(!empty($className['ClassName']['book_list'])) { ?><a href="<?php echo $this->webroot.'files/book_lists/'.$className['ClassName']['book_list'];?>" target="_blank"><?php echo $className['ClassName']['book_list'];?></a><?php } ?>&nbsp;</td>
                     <td class="actions" style="white-space: nowrap;">
                         <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $className['ClassName']['id']), array( 'class' => 'btn btn-info')); ?>
                         <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $className['ClassName']['id']), array( 'class' => 'btn btn-info'), __('Are you sure you want to delete %s?', $className['ClassName']['name']));  ?>

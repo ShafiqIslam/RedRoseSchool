@@ -35,7 +35,7 @@
     Router::connect('/result_e', array('controller' => 'pages', 'action' => 'display', 'result_index_error'));
     Router::connect('/about', array('controller' => 'pages', 'action' => 'display', 'about'));
     Router::connect('/routine', array('controller' => 'routines', 'action' => 'public_display'));
-    Router::connect('/text_list', array('controller' => 'pages', 'action' => 'display', 'text_list'));
+    Router::connect('/book_list', array('controller' => 'class_names', 'action' => 'book_list'));
     Router::connect('/notice/*', array('controller' => 'notices', 'action' => 'public_display'));
     Router::connect('/news/*', array('controller' => 'news', 'action' => 'public_display'));
     Router::connect('/syllabus', array('controller' => 'syllabi', 'action' => 'public_display'));

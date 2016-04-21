@@ -112,6 +112,11 @@ class SuggestionsController extends AppController {
 	}
 
 	public function public_display () {
+		$logged = $this->Session->read('student_logged');
+		if(!$logged) {
+			return $this->redirect(array('controller'=>'students', 'action' => 'student_login'));
+		}
+
 		$this->Suggestion->recursive = 1;
         $suggestions = $this->Suggestion->find('all', array(
             	'order' => array('Suggestion.class_name_id','Suggestion.modified DESC')
