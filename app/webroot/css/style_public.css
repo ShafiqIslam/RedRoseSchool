@@ -455,6 +455,18 @@ header h1{
 	color: red;
 }
 
+.eventsCalendar-daysList li:nth-child(7n),
+.eventsCalendar-daysList li:nth-child(7n-1){
+	background-color: red !important;
+	color: #fff !important;
+} 
+
+.eventsCalendar-daysList li:nth-child(7n) a,
+.eventsCalendar-daysList li:nth-child(7n-1) a{
+	background-color: #D82C2C !important;
+	color: #fff !important;
+}
+
 
 /*-----------------Notice--------------*/
 
