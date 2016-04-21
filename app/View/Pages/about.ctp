@@ -5,25 +5,21 @@
 				<div id="chairman" class="text-content">
 					<h1>চেয়ারম্যানের বাণী</h1>
 					<hr>
-					<img class="img-responsive" src="img/logo.jpg">
 					<p><?php echo $general_data['General']['chairman'];?></p>
 				</div>
 				<div id="headmaster" class="text-content">
 					<h1>প্রধান শিক্ষকের কথা</h1>
 					<hr>
-					<img class="img-responsive" src="img/logo.jpg">
 					<p><?php echo $general_data['General']['headmaster'];?></p>
 				</div>
 				<div id="mang-commitee" class="text-content">
 					<h1>ব্যবস্থাপনা কমিটি</h1>
 					<hr>
-					<img class="img-responsive" src="img/logo.jpg">
 					<p><?php echo $general_data['General']['governing'];?></p>
 				</div>
 				<div id="goal" class="text-content">
 					<h1>লক্ষ্য ও উদ্দেশ্য</h1>
 					<hr>
-					<img class="img-responsive" src="img/logo.jpg">
 					<p><?php echo $general_data['General']['purpose'];?></p>
 				</div>
 			</div>

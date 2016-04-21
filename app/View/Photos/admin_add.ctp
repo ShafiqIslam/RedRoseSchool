@@ -1,5 +1,5 @@
 <?php echo $this->element('menu');?>
-<?php $types = array('School', 'Picnic', 'Sports', 'Party'); ?>
+<?php $types = array('School', 'Picnic', 'Sports', 'Party', 'Others'); ?>
 <div class="index col-md-10 col-sm-10">
     <div class="white">
         <?php echo $this->Form->create('Photo',array('class'=>'form-horizontal col-md-6', 'type'=>'file')); ?>
