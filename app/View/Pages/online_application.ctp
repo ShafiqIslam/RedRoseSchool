@@ -2,7 +2,7 @@
 <div class="container application_body">
 	<h2>অনলাইন অ্যাপ্লিকেশন ফরম</h2>
 	<hr>
-	<div class="online_application col-sm-offset-3 col-sm-6">
+	<div class="online_application col-sm-offset-2 col-sm-8">
 		<form action="<?php echo $this->webroot.'online_applications/public_add';?>" class="form-horizontal" method="post" role="form">
 
 		    <div class="form-group">
@@ -30,7 +30,7 @@
 		       <label class="control-label col-sm-5"><b>রক্তের গ্রুপ:<b></label>
 		      <div class="col-sm-7">          
 		        <select name="data[OnlineApplication][blood_group]" class="form-control" required>
-		        	<option class="active">রক্তের গ্রুপ</option>
+		        	<option selected="true" disabled="disabled" class="active">রক্তের গ্রুপ</option>
 		        	<option value="A+">A+</option>
 		        	<option value="B+">B+</option>
 		        	<option value="AB+">AB+</option>
@@ -148,7 +148,7 @@
 			</div>
 
 		    <div class="form-group">
-				<label class="control-label col-sm-5"><b>অভিভাবকের নাম,ঠিকানা,পেশা ও সস্মর্ক:<b></label>
+				<label class="control-label col-sm-5"><b>অভিভাবকের নাম,ঠিকানা,পেশা ও সম্পর্ক:<b></label>
 				<div class="col-sm-7">          
 					<textarea name="data[OnlineApplication][guardian_name]"  class="col-sm-12 form-control" required></textarea>
 				</div>
@@ -165,7 +165,7 @@
 				<label class="control-label col-sm-5"><b>যে শ্রেণীতে ভর্তি হতে ইচ্ছুক:<b></label>
 				<div class="col-sm-7">          
 					<select name="data[OnlineApplication][class_name_id]" class="form-control" required>
-						<option class="active">শ্রেণী নির্বাচন করুন</option>
+						<option selected="true" disabled="disabled" class="active">শ্রেণী নির্বাচন করুন</option>
 						<?php foreach ($classNames as $key => $className) { ?>		        	
 						<option value="<?php echo $key;?>"><?php echo $className;?></option>	
 					<?php } ?>

@@ -8,7 +8,7 @@ class OnlineApplicationsController extends AppController {
 
 	public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('public_add', 'public_complete', 'public_status', 'test_create_PDF');
+        $this->Auth->allow('public_add', 'public_complete', 'public_status', 'test_create_PDF', 'application_pdf');
     }
 
 	public function admin_index() {
@@ -296,5 +296,14 @@ class OnlineApplicationsController extends AppController {
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->layout = "public";
 		$this->render("../Pages/application_status");
+	}
+
+	public function application_pdf() {
+		$this->autoLayout = false;
+		$options = array('conditions' => array('OnlineApplication.' . $this->OnlineApplication->primaryKey => 1));
+		$data = $this->OnlineApplication->find('first', $options);        
+        #AuthComponent::_setTrace($data);
+
+        $this->set(compact('data'));
 	}
 }
