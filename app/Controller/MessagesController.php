@@ -402,9 +402,9 @@ class MessagesController extends AppController {
 		$data['Message']['text'] = $msg;
 
 		$sms_sent = $this->send_sms($number, $msg);
-		$this->request->data['Message']['status'] = $sms_sent['success'];
-		$this->request->data['Message']['status_message'] = $sms_sent['response'];
-		if ($this->Message->save($this->request->data)) {
+		$data['Message']['status'] = $sms_sent['success'];
+		$data['Message']['status_message'] = $sms_sent['response'];
+		if ($this->Message->save($data)) {
 			return true;
 		}
 		return false;
