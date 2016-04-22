@@ -2,7 +2,7 @@
 <div class="container application_body">
 	<h2>অনলাইন অ্যাপ্লিকেশন ফরম</h2>
 	<hr>
-	<div class="online_application col-sm-offset-2 col-sm-8">
+	<div class="online_application col-sm-offset-1 col-sm-10">
 		<form action="<?php echo $this->webroot.'online_applications/public_add';?>" class="form-horizontal" method="post" role="form">
 
 		    <div class="form-group">
