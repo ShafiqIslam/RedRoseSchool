@@ -2,7 +2,7 @@
 	<?php if(empty($is_exist)) { ?>
 		<?php if(!empty($msg) && $msg==1) { ?>
 			<div class="application_invalid">
-				<p>টোকেন নং ভুল! পুনরায় চেষ্টা করুন, অথবা আপনার অ্যাপ্লিকেশন মুছে ফেলা হতে পারে, সেক্ষেত্রে, <a href="<?php echo $this->webroot?>contact">কর্তৃপক্ষের সাথে যগাযোগ করুন।<span><i class="fa fa-external-link fa-lg"></i></span></a>.</p>
+				<p>টোকেন নং ভুল! পুনরায় চেষ্টা করুন, অথবা আপনার অ্যাপ্লিকেশন মুছে ফেলা হতে পারে, সেক্ষেত্রে, <a href="<?php echo $this->webroot?>contact">কর্তৃপক্ষের সাথে যোগাযোগ করুন।<span><i class="fa fa-external-link fa-lg"></i></span></a>.</p>
 			</div>
 		<?php } ?>
 			<div class="col-sm-offset-4">
@@ -28,7 +28,7 @@
 	<?php } else { ?>
 		<div class="application_success">
 		<?php if($is_exist['OnlineApplication']['status']=="In Queue") { ?>
-			<p>আপনার আবেদন এখনও প্রক্রিয়াধীন। চেক করে দ্রুত আপনাকে জানাব। ধন্যবাদ সঙ্গে থাকার জন্য।</p>
+			<p>আপনার আবেদন এখনও প্রক্রিয়াধীন। শীঘ্রই যথাযথ ব্যবস্থা গ্রহণ করা হবে এবং আপনাকে জানানো হবে। ধন্যবাদ সঙ্গে থাকার জন্য।</p>
 		<?php } elseif($is_exist['OnlineApplication']['status']=="Declined") { ?>
 			<p>Your application is declined.</p>
 		<?php } elseif($is_exist['OnlineApplication']['status']=="Granted") { ?>
@@ -36,6 +36,8 @@
 		<?php } elseif($is_exist['OnlineApplication']['status']=="Admitted") { ?>
 			<p>The student has been admitted.</p>
 		<?php } ?>
+
+		<p>যদি আপনার কোন জিজ্ঞাসা থাকে, তাহলে <a href="<?php echo $this->webroot?>contact">কর্তৃপক্ষের সাথে যোগাযোগ করুন।<span><i class="fa fa-external-link fa-lg"></i></span></a>.</p>
 		</div>
 	<?php } ?>
 </div>

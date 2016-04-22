@@ -74,13 +74,12 @@ class OnlineApplicationsController extends AppController {
 			$data['OnlineApplication']['status'] = "Granted";
 
 			//make pdf here
-
-			$data['OnlineApplication']['pdf_link'] = "";
+			$data['OnlineApplication']['pdf_link'] = $this->_create_PDF($id);;
 			$this->OnlineApplication->save($data);
 
 			$message_obj = new MessagesController();
 			$number = $data['OnlineApplication']['mobile'];
-			$msg = "Your application (token: " . $data['OnlineApplication']['token'] . ") has been granted. Contact with administration to follow with fees and documents. Thanks for using our online application service.";
+			$msg = "Your application (token: " . $data['OnlineApplication']['token'] . ") has been granted. Print the document of your application and contact with administration with fees. Thanks.";
 			$name = $data['OnlineApplication']['name_en'];
 
 			$message_obj->automatic_message($number, $msg, "Online Application Granted", $name);
@@ -165,8 +164,9 @@ class OnlineApplicationsController extends AppController {
 	}
 
 	public function test_create_PDF () {
-		//$this->_create_PDF(1);
 		AuthComponent::_setTrace($this->_create_PDF(1));
+		echo date("Y-m-d h:i:s A"); die();
+		echo date_format(time(), 'Y-m-d H:i:s'); die();
 	}
 
 	private function _create_PDF($id){

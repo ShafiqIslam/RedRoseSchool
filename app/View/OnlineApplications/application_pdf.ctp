@@ -110,27 +110,27 @@
 				<h3 style="margin-top: 15px;">Student's Application Details</h3>			
 				<table border="1px" class="table-border" width="100%" cellpadding="5px" cellspacing="0" style="margin-top: 20px;">
 					<tr>
-						<td><b>Student's Name</b></td>
+						<td>Student's Name</td>
 						<td><strong><?php echo $data['OnlineApplication']['name_en']; ?></strong></td>
 					</tr>
 					<tr class="zebra-stripe">
-						<td><b>Birth Date</b></td>
-						<td><strong><?php echo $data['OnlineApplication']['birthday']; ?></strong></td>
+						<td>Birth Date</td>
+						<td><strong><?php echo date_format(date_create($data['OnlineApplication']['birthday']), 'd.m.Y');?></strong></td>
 					</tr>
 					<tr>
-						<td><b>Father's Name</b></td>
+						<td>Father's Name</td>
 						<td><strong><?php echo $data['OnlineApplication']['father_name_en']; ?></strong></td>
 					</tr>
 					<tr class="zebra-stripe">
-						<td><b>Mother's Name</b></td>
+						<td>Mother's Name</td>
 						<td><strong><?php echo $data['OnlineApplication']['mother_name_en']; ?></strong></td>
 					</tr>
 					<tr>
-						<td><b>Admitted Class</b></td>
+						<td>Admitted Class</td>
 						<td><strong><?php echo $data['OnlineApplication']['class_name_id']; ?></strong></td>
 					</tr>
 					<tr class="zebra-stripe">
-						<td><b>Contact No.</b></td>
+						<td>Contact No.</td>
 						<td><strong><?php echo $data['OnlineApplication']['mobile']; ?></strong></td>
 					</tr>				
 				</table>
@@ -145,7 +145,7 @@
 				<table class="all-most" width="100%" cellpadding="0" cellspacing="0">
 					<tr>
 						<td align="left" valign="top">
-							<p style="font-size: 10px; text-decoration: underline; margin-top: 70px;"><strong>Signature of the Guardian & date</strong></pp>
+							<p style="font-size: 10px; text-decoration: underline; margin-top: 70px;"><strong>Signature of the Guardian & date</strong></p>
 						</td>
 						<td align="right" valign="top">
 							<p style="font-size: 10px; text-decoration: underline; margin-top: 70px;"><strong>Signature of the Headmaster & date</strong></p>
@@ -157,13 +157,16 @@
 				<table class="all-most" width="100%" cellpadding="0" cellspacing="0" style="margin-top: -10px;">
 					<tr>
 						<td align="left" valign="top">
-							<span>Please save your <span style="color:#0E8EAB; ">"Application Token"</span> number for further use.</span>
+							<span>Please save your <span style="color:#0E8EAB; "> "Application Token" </span> number for further use.</span>
 							<span>At the time of admission take the appllication printed form with you.</span>
 						</td>
 					</tr>
 				</table>
 				<table class="all-most" width="100%" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
 					<tr>
+						<td align="left" valign="top">
+							<span style="font-size: 7px;">Generated on: <?php echo date("Y-m-d h:i:s A");?></span>
+						</td>
 						<td align="right" valign="top">
 							<span style="font-size: 7px;">Technical Support By : XorCoder, website : www.xorcoder.com</span>
 						</td>
