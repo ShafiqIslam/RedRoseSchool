@@ -30,14 +30,13 @@
 		<?php if($is_exist['OnlineApplication']['status']=="In Queue") { ?>
 			<p>আপনার আবেদন এখনও প্রক্রিয়াধীন। শীঘ্রই যথাযথ ব্যবস্থা গ্রহণ করা হবে এবং আপনাকে জানানো হবে। ধন্যবাদ সঙ্গে থাকার জন্য।</p>
 		<?php } elseif($is_exist['OnlineApplication']['status']=="Declined") { ?>
-			<p>Your application is declined.</p>
+			<p>আপনার আবেদন প্রত্যাখ্যান করা হয়েছে।</p>
 		<?php } elseif($is_exist['OnlineApplication']['status']=="Granted") { ?>
-			<p>Your application is granted. <a href="<?php echo $this->webroot.'files/online_applications/'.$is_exist['OnlineApplication']['pdf_link'];?>" target="_blank">Print this file</a> and contact to the School Office. Thank you very much for being with us.</p>
+			<p>আপনার আবেদন গৃহীত হয়েছে।<a href="<?php echo $this->webroot.'files/online_applications/'.$is_exist['OnlineApplication']['pdf_link'];?>" target="_blank">আবেদন্টিকে প্রিন্ট করুন।</a> এবং স্কুলের অফিসের সাথে যোগাযোগ করুন । ধন্যবাদ সঙ্গে থাকার জন্য। </p>
 		<?php } elseif($is_exist['OnlineApplication']['status']=="Admitted") { ?>
-			<p>The student has been admitted.</p>
+			<p>আবেদনকৃত শিক্ষার্থীর ভর্তি সম্পন্ন হয়েছে।</p>
 		<?php } ?>
-
-		<p>যদি আপনার কোন জিজ্ঞাসা থাকে, তাহলে <a href="<?php echo $this->webroot?>contact">কর্তৃপক্ষের সাথে যোগাযোগ করুন।<span><i class="fa fa-external-link fa-lg"></i></span></a>.</p>
+			<p style="margin-top: 10px;">যদি আপনার কোন জিজ্ঞাসা থাকে, তাহলে <a href="<?php echo $this->webroot?>contact">কর্তৃপক্ষের সাথে যোগাযোগ করুন।<span><i class="fa fa-external-link fa-lg"></i></span></a>.</p>
 		</div>
 	<?php } ?>
 </div>

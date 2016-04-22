@@ -90,7 +90,7 @@
 							</table>
 						</td>
 						<td align="right" width="200px">
-							<table width="100%" cellpadding="3px" cellspacing="0"  style="background-color: rgb(241, 241, 241);">
+							<table width="100%" cellpadding="3px" cellspacing="0"  style="background-color: rgb(241, 241, 241); padding: 5px;">
 								<tr>
 									<td>Application Date</td>
 									<td><strong><?php echo date_format(date_create($data['OnlineApplication']['created']), 'd.m.Y');?></strong></td>
