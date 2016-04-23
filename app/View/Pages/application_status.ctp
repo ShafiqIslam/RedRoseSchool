@@ -1,3 +1,4 @@
+<?php AuthComponent::_setTrace($this->webroot);?>
 <div class="container main-content ">
 	<?php if(empty($is_exist)) { ?>
 		<?php if(!empty($msg) && $msg==1) { ?>
