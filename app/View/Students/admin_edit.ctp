@@ -226,6 +226,12 @@ $blood_groups = array(
                 </div>
             </div>
             <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">Code</label>
+                <div class="col-sm-9">
+                    <?php echo $this->Form->input('code',array('label' => false,'class'=>'form-control', 'disabled'=>true)); ?>
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 control-label">Password</label>
                 <div class="col-sm-9">
                     <?php echo $this->Form->input('simple_pwd',array('label' => false,'class'=>'form-control')); ?>
