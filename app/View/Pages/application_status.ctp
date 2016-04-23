@@ -7,7 +7,7 @@
 		<?php } ?>
 			<div class="col-sm-offset-4">
 				<div class="application_status col-sm-6">
-					<form class="form-horizontal" role="form" action="<?php echo $this->webroot;?>/online_applications/public_status" method="post">
+					<form class="form-horizontal" role="form" action="<?php echo $this->webroot;?>online_applications/public_status" method="post">
 						<div class="form-group">
 							<label class="control-label col-sm-4"><b>টোকেন নং<b></label>
 							<div class="col-sm-8">          
