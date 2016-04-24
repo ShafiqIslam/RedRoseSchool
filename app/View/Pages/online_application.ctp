@@ -22,7 +22,7 @@
 		    <div class="form-group">
 				<label class="control-label col-sm-5"><b>ছাত্র/ছাত্রীর জন্ম তারিখ:<b></label>
 				<div class="col-sm-7">          
-					<input type="date" class="form-control" name="data[OnlineApplication][birthday]" placeholder="yyyy-mm-dd (যেমনঃ 2010-01-31)" required>
+					<input id="datepicker" type="date" class="form-control" name="data[OnlineApplication][birthday]" placeholder="yyyy-mm-dd (যেমনঃ 2010-01-31)" required>
 				</div>
 			</div>
 

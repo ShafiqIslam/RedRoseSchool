@@ -26,7 +26,7 @@
             <li class="dropdown <?php if($page=='academic') echo 'active';?>">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">একাডেমিক<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="<?php echo $this->webroot;?>guardian">অভিভাবকদের</a></li>
+                <li><a href="<?php echo $this->webroot;?>guardian">অভিভাবকদের সম্পর্কে</a></li>
                 <li><a href="<?php echo $this->webroot;?>dress">পোশাক কোড</a></li>
                 <li><a href="<?php echo $this->webroot;?>book_list">পাঠ্যতালিকা </a></li>
                 <li><a href="<?php echo $this->webroot;?>syllabus">সিলেবাস</a></li>

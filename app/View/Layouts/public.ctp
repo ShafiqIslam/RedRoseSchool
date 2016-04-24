@@ -14,8 +14,8 @@
     <?php
         echo $this->Html->meta('icon');
         //echo $this->Html->css('cake.generic');
-        echo $this->Html->css(array('bootstrap', 'latest-notice', 'eventCalendar', 'eventCalendar_theme_responsive', 'superbox', 'style_public'));
-        echo $this->Html->script(array('jquery-1.11.3', 'bootstrap.min', 'bootstrap-formhelpers-phone.js'));
+        echo $this->Html->css(array('bootstrap', 'latest-notice', 'eventCalendar', 'jquery-ui', 'eventCalendar_theme_responsive', 'superbox', 'style_public'));
+        echo $this->Html->script(array('jquery-1.11.3', 'bootstrap.min','jquery-ui', 'bootstrap-formhelpers-phone.js'));
 
         echo $this->fetch('meta');
         echo $this->fetch('css');
@@ -76,7 +76,7 @@
           <h3>একাডেমিক</h3>
           <hr>
           <ul>
-            <li><a href="<?php echo $this->webroot;?>guardian"><span class="glyphicon glyphicon-menu-right">অভিভাবকদের</a></li>
+            <li><a href="<?php echo $this->webroot;?>guardian"><span class="glyphicon glyphicon-menu-right">অভিভাবকদের সম্পর্কে</a></li>
             <li><a href="<?php echo $this->webroot;?>dress"><span class="glyphicon glyphicon-menu-right">পোশাক কোড</a></li>
             <li><a href="<?php echo $this->webroot;?>syllabus"><span class="glyphicon glyphicon-menu-right">সিলেবাস</a></li>
             <li><a href="<?php echo $this->webroot;?>suggestion"><span class="glyphicon glyphicon-menu-right">সাজেশন</a></li>
