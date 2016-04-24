@@ -41,7 +41,6 @@
             <hr class="admission-h1-border">
               <p><?php echo $general_data['General']['admission_msg']; ?></p>
             <div class="button online_apply">
-              <!--<button class="btn">অনলাইন আবেদন করার পদ্ধতি</button>-->
               <a href="<?php $this->webroot;?>files/application_instr/postal_result.pdf" id="" class="btn" target="_blank">অনলাইন আবেদন করার পদ্ধতি</a>
               <a href="online_application" id="btn_online" class="btn btn_online">অনলাইন আবেদন</a>
               <a href="application_status" class="btn btn_online appli_status">আপনার অ্যাপ্লিকেশন চেক করুন</a>
