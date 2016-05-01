@@ -587,13 +587,6 @@ header h1{
 	padding-top: 15px;
 }
 
-.tab-content > .tab-pane{
-  display: none;
-}
-
-.tab-content > .active{
-  display: block;
-}
 
 /*-------------result css END------------*/
 
