@@ -260,6 +260,20 @@ header h1{
     font-weight: inherit;
     vertical-align: middle;
     margin-bottom: 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.online_apply .btn:hover{
+	background: #fff;
+	color: #22770D;
+	border: 1px solid #22770D;
+	transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
 }
 
 .admission .btn_online{

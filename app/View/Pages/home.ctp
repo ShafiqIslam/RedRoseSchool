@@ -39,7 +39,9 @@
           <div class="admission">
             <h1>অনলাইন ভর্তি প্রক্রিয়া </h1>
             <hr class="admission-h1-border">
-              <p><?php echo $general_data['General']['admission_msg']; ?></p>
+              <div class="admission_msg">
+                <p><?php echo $general_data['General']['admission_msg']; ?></p>
+              </div> 
             <div class="button online_apply">
               <a href="<?php $this->webroot;?>files/application_instr/postal_result.pdf" id="" class="btn" target="_blank">অনলাইন আবেদন করার পদ্ধতি</a>
               <a href="online_application" id="btn_online" class="btn btn_online">অনলাইন আবেদন</a>
