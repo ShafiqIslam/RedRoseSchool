@@ -214,6 +214,10 @@ header h1{
 	width: 90%;
 }
 
+.admission_msg{
+	padding: 0px 10px;
+}
+
 .admission p{
 	color:#fcf8e3;
 	font-size: 118%;
@@ -506,6 +510,7 @@ header h1{
 
 .list-group ul li a{
 	-webkit-transition: all .3s;
+	font-size: 15px;
 }
 
 .list-group ul li:hover a{
@@ -582,6 +587,13 @@ header h1{
 	padding-top: 15px;
 }
 
+.tab-content > .tab-pane{
+  display: none;
+}
+
+.tab-content > .active{
+  display: block;
+}
 
 /*-------------result css END------------*/
 

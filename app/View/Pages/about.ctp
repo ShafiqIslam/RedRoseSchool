@@ -1,23 +1,23 @@
 <div class="container main-content">
 	<div class="row">
 		<div class="col-sm-9">
-			<div class="tab-content222">
-				<div id="chairman" class="text-content">
+			<div class="tab-content">
+				<div id="chairman" class="text-content tab-pane fade in active">
 					<h1>চেয়ারম্যানের বাণী</h1>
 					<hr>
 					<p><?php echo $general_data['General']['chairman'];?></p>
 				</div>
-				<div id="headmaster" class="text-content">
+				<div id="headmaster" class="text-content tab-pane fade in active">
 					<h1>প্রধান শিক্ষকের কথা</h1>
 					<hr>
 					<p><?php echo $general_data['General']['headmaster'];?></p>
 				</div>
-				<div id="mang-commitee" class="text-content">
+				<div id="mang-commitee" class="text-content tab-pane fade in active">
 					<h1>ব্যবস্থাপনা কমিটি</h1>
 					<hr>
 					<p><?php echo $general_data['General']['governing'];?></p>
 				</div>
-				<div id="goal" class="text-content">
+				<div id="goal" class="text-content tab-pane fade in active">
 					<h1>লক্ষ্য ও উদ্দেশ্য</h1>
 					<hr>
 					<p><?php echo $general_data['General']['purpose'];?></p>

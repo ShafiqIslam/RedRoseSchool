@@ -91,20 +91,16 @@
           </script>
         </div>
         
-        <!--==================== Larest News=================-->
+        <!--==================== Latest News=================-->
         <div class="latest-notice">
           <div class="notice-body">
             <div class="panel">
               <div class="panel-heading"><h3>সর্বশেষ বিজ্ঞপ্তি</h3></div>
               <div class="panel-body">
-                <ul class="demo1">
+                <ul class="latest_news_slide">
                   <?php foreach($notices as $notice) { ?>
                   <li class="news-item">
-                    <table cellpadding="3">
-                      <tr>
-                        <td><a href="notice/<?php echo $notice['Notice']['id'];?>"><?php echo date_format(date_create($notice['Notice']['created']), 'd M Y');?> - <?php echo $notice['Notice']['title']?>...</a></td>
-                      </tr>
-                    </table>
+                    <a href="notice/<?php echo $notice['Notice']['id'];?>"><?php echo date_format(date_create($notice['Notice']['created']), 'd M Y');?> - <?php echo $notice['Notice']['title']?>...</a>
                   </li>
                   <?php } ?>
                 </ul>

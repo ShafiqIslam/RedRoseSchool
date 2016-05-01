@@ -47,7 +47,7 @@
 			              <div class="col-md-9 inputGroupContainer">
 				              <div class="input-group">
 				              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-				              <input  name="data[Message][sender_name]" placeholder="আপনার নাম" class="form-control"  type="text" required>
+				              <input  name="data[Message][sender_name]" placeholder="আপনার নাম" class="form-control"  type="text" required="">
 				                </div>
 			              </div>
 			            </div>
@@ -58,7 +58,7 @@
 			              <div class="col-md-9 inputGroupContainer">
 			                <div class="input-group">
 			                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-			              		<input name="data[Message][sender_mail]" placeholder="আপনার ই-মেইল" class="form-control"  type="email" required>
+			              		<input type="email" name="data[Message][sender_mail]" placeholder="আপনার ই-মেইল" class="form-control" required="">
 			                </div>
 			              </div>
 			            </div>
@@ -70,7 +70,7 @@
 			                <div class="col-md-9 inputGroupContainer">
 			                <div class="input-group">
 			                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-			              		<input name="data[Message][sender_phone]" data-format="+880 dddd-dddddd" class="form-control bfh-phone" type="text" required>
+			              		<input name="data[Message][sender_phone]" data-format="+880 dddd-dddddd" class="form-control bfh-phone" type="text" required="">
 			                </div>
 			              </div>
 			            </div>
